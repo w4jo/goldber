@@ -7,13 +7,13 @@ import Image from "next/image"
 
 export default function GoldberWebsite() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-teal-700 rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">G</span>
               </div>
               <div>
@@ -22,19 +22,19 @@ export default function GoldberWebsite() {
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-slate-700 hover:text-slate-900 transition-colors">
-                About
+              <a href="#about" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                About Us
               </a>
-              <a href="#real-estate" className="text-slate-700 hover:text-slate-900 transition-colors">
+              <a href="#real-estate" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
                 Real Estate
               </a>
-              <a href="#energy" className="text-slate-700 hover:text-slate-900 transition-colors">
+              <a href="#green-energy" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
                 Green Energy
               </a>
-              <a href="#luxury-cars" className="text-slate-700 hover:text-slate-900 transition-colors">
+              <a href="#luxury-cars" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
                 Luxury Cars
               </a>
-              <a href="#contact" className="text-slate-700 hover:text-slate-900 transition-colors">
+              <a href="#contact" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
                 Contact
               </a>
             </nav>
@@ -74,23 +74,23 @@ export default function GoldberWebsite() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-16">
-            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">FOCUS AREAS</p>
+            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">OUR BUSINESS</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 max-w-4xl">
-              We partner with innovative businesses to fast-track a sustainable future.
+              Three dynamic sectors driving sustainable growth and exceptional returns.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {/* Real Estate - Dark Teal */}
-            <Card className="bg-teal-700 text-white p-8 rounded-3xl border-0 hover:shadow-xl transition-all duration-300">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Real Estate */}
+            <Card className="bg-slate-900 text-white p-8 rounded-3xl border-0 hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
                 <div className="w-12 h-12">
                   <Building2 className="w-full h-full text-white" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">Real Estate</h3>
+                  <h3 className="text-2xl font-bold mb-4">Real Estate Investments</h3>
                   <p className="text-slate-300 leading-relaxed mb-6">
-                    Strategic property investments across European markets, focusing on premium developments and
+                    Strategic property investments across European markets, focusing on premium developments and 
                     sustainable growth opportunities in prime locations.
                   </p>
                   <button className="flex items-center space-x-2 text-white hover:text-slate-200 transition-colors group">
@@ -101,8 +101,8 @@ export default function GoldberWebsite() {
               </div>
             </Card>
 
-            {/* Green Energy - Light Green */}
-            <Card className="bg-lime-400 text-slate-900 p-8 rounded-3xl border-0 hover:shadow-xl transition-all duration-300">
+            {/* Green Energy */}
+            <Card className="bg-lime-500 text-slate-900 p-8 rounded-3xl border-0 hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
                 <div className="w-12 h-12">
                   <Wind className="w-full h-full text-slate-900" strokeWidth={1.5} />
@@ -110,8 +110,8 @@ export default function GoldberWebsite() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4">Green Energy</h3>
                   <p className="text-slate-800 leading-relaxed mb-6">
-                    Tapping into renewable energy's limitless potential, creating vast sustainable power sources to fuel
-                    a greener tomorrow through solar and wind investments.
+                    Investments in renewable energy projects including solar farms and wind parks, driving the transition 
+                    to sustainable power generation.
                   </p>
                   <button className="flex items-center space-x-2 text-slate-900 hover:text-slate-700 transition-colors group">
                     <span className="font-medium">Learn More</span>
@@ -121,39 +121,19 @@ export default function GoldberWebsite() {
               </div>
             </Card>
 
-            {/* Luxury Cars - Orange */}
+            {/* Luxury Cars */}
             <Card className="bg-orange-500 text-slate-900 p-8 rounded-3xl border-0 hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
                 <div className="w-12 h-12">
                   <Car className="w-full h-full text-slate-900" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">Luxury Automotive</h3>
+                  <h3 className="text-2xl font-bold mb-4">Luxury Car Rentals</h3>
                   <p className="text-slate-800 leading-relaxed mb-6">
-                    Premium automotive experiences through our curated fleet of Ferrari, McLaren, and Lamborghini
-                    vehicles, delivering exceptional luxury services.
+                    Premium automotive experiences featuring our exclusive fleet of Ferrari, McLaren, and Lamborghini 
+                    supercars for discerning clients.
                   </p>
                   <button className="flex items-center space-x-2 text-slate-900 hover:text-slate-700 transition-colors group">
-                    <span className="font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            {/* Investment Services - Dark Gray */}
-            <Card className="bg-gray-800 text-white p-8 rounded-3xl border-0 hover:shadow-xl transition-all duration-300">
-              <div className="space-y-6">
-                <div className="w-12 h-12">
-                  <Sparkles className="w-full h-full text-white" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Investment Advisory</h3>
-                  <p className="text-slate-300 leading-relaxed mb-6">
-                    Comprehensive investment consulting services, leveraging our expertise across multiple sectors to
-                    maximize returns and minimize risk for our partners.
-                  </p>
-                  <button className="flex items-center space-x-2 text-white hover:text-slate-200 transition-colors group">
                     <span className="font-medium">Learn More</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -164,7 +144,7 @@ export default function GoldberWebsite() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - With Stats */}
       <section id="about" className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -172,12 +152,12 @@ export default function GoldberWebsite() {
               <Badge className="mb-4 bg-lime-600 text-white">About Goldber</Badge>
               <h2 className="text-4xl font-bold mb-6">Czech Roots, European Vision</h2>
               <p className="text-xl text-slate-300 mb-6">
-                Founded with a commitment to excellence, Goldber Real Estate s.r.o. represents the pinnacle of
+                Founded with a commitment to excellence, Goldber Real Estate s.r.o. represents the pinnacle of 
                 investment expertise across three dynamic sectors.
               </p>
               <p className="text-slate-300 mb-8">
-                Our Czech heritage combined with European market knowledge allows us to identify and capitalize on
-                premium investment opportunities. We believe in sustainable growth, environmental responsibility, and
+                Our Czech heritage combined with European market knowledge allows us to identify and capitalize on 
+                premium investment opportunities. We believe in sustainable growth, environmental responsibility, and 
                 delivering exceptional experiences to our clients.
               </p>
               <div className="grid grid-cols-3 gap-8 text-center">
@@ -208,21 +188,127 @@ export default function GoldberWebsite() {
         </div>
       </section>
 
-      {/* Real Estate Projects - Project Showcase Style */}
+      {/* News Section */}
+            {/* News Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mb-16">
+            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">LATEST NEWS</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Market Updates & Insights
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl">
+              Stay informed about the latest developments in our investment sectors and market opportunities.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Real Estate News */}
+            <Card className="group hover:shadow-lg transition-shadow duration-300">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <Image
+                  src="/prague-office-building.png"
+                  alt="Prague Real Estate Market"
+                  width={400}
+                  height={240}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <Badge variant="outline" className="mb-3 text-slate-600 border-slate-200">
+                  Real Estate
+                </Badge>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-lime-600 transition-colors">
+                  Prague Market Reaches Record Highs
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  The Czech capital's commercial real estate market continues to attract international investors 
+                  with strong fundamentals and growth potential.
+                </p>
+                <p className="text-sm text-slate-500">March 2024</p>
+              </CardContent>
+            </Card>
+
+            {/* Green Energy News */}
+            <Card className="group hover:shadow-lg transition-shadow duration-300">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <Image
+                  src="/placeholder-2edxb.png"
+                  alt="Solar Energy Development"
+                  width={400}
+                  height={240}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <Badge variant="outline" className="mb-3 text-slate-600 border-slate-200">
+                  Green Energy
+                </Badge>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-lime-600 transition-colors">
+                  EU Solar Investments Surge 40%
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  European renewable energy sector sees unprecedented growth as governments accelerate 
+                  green transition policies and incentives.
+                </p>
+                <p className="text-sm text-slate-500">March 2024</p>
+              </CardContent>
+            </Card>
+
+            {/* Luxury Cars News */}
+            <Card className="group hover:shadow-lg transition-shadow duration-300">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <Image
+                  src="/yellow-lamborghini-race-track.png"
+                  alt="Luxury Car Market"
+                  width={400}
+                  height={240}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <Badge variant="outline" className="mb-3 text-slate-600 border-slate-200">
+                  Luxury Cars
+                </Badge>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-lime-600 transition-colors">
+                  Supercar Rental Market Expands
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Premium automotive experiences see increased demand as luxury travel rebounds 
+                  and experiential consumption grows across Europe.
+                </p>
+                <p className="text-sm text-slate-500">February 2024</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Real Estate Projects */}
       <section id="real-estate" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
-          {/* Project 1 */}
+          <div className="mb-16">
+            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">REAL ESTATE</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Investment Portfolio
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl">
+              Strategic property investments across European and Czech markets, focusing on premium developments 
+              and sustainable growth opportunities.
+            </p>
+          </div>
+
+          {/* Project 1 - Prague Residential */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">PROJECT 1</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Prague Residential</h2>
+                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">FEATURED PROJECT</p>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Prague Residential Complex</h2>
                 <p className="text-slate-600 text-lg">2024</p>
 
                 <p className="text-slate-600 leading-relaxed text-lg max-w-lg">
-                  Goldber is a premium real estate investment company based in Czech Republic, focusing on sustainable
-                  development and luxury residential projects. We invest in various areas, including commercial and
-                  residential properties.
+                  A premium residential development in Prague's prime location, featuring modern apartments with 
+                  sustainable design principles and high-end amenities for discerning residents.
                 </p>
 
                 <div className="grid grid-cols-3 gap-8 pt-4">
@@ -244,7 +330,7 @@ export default function GoldberWebsite() {
               <div className="relative">
                 <Image
                   src="/prague-residential-complex.png"
-                  alt="Prague Residential Project"
+                  alt="Prague Residential Complex"
                   width={600}
                   height={400}
                   className="rounded-2xl shadow-lg w-full h-auto"
@@ -253,18 +339,17 @@ export default function GoldberWebsite() {
             </div>
           </div>
 
-          {/* Project 2 */}
+          {/* Project 2 - Vienna Commercial */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">PROJECT 2</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Vienna Commercial</h2>
+              <div className="space-y-6 lg:order-2">
+                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">COMMERCIAL PROJECT</p>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Vienna Office Tower</h2>
                 <p className="text-slate-600 text-lg">2023</p>
 
                 <p className="text-slate-600 leading-relaxed text-lg max-w-lg">
-                  Goldber is a premium real estate investment company based in Czech Republic, focusing on sustainable
-                  development and commercial office spaces. We invest in various areas, including modern business
-                  centers.
+                  Modern office complex in Vienna's business district, providing premium workspace solutions with 
+                  advanced technology infrastructure and sustainable building practices.
                 </p>
 
                 <div className="grid grid-cols-3 gap-8 pt-4">
@@ -278,15 +363,15 @@ export default function GoldberWebsite() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-slate-500 mb-2">Type</p>
-                    <p className="text-slate-900 font-medium">Office, Retail, Mixed-use</p>
+                    <p className="text-slate-900 font-medium">Office, Retail</p>
                   </div>
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative lg:order-1">
                 <Image
                   src="/vienna-office-building.png"
-                  alt="Vienna Commercial Project"
+                  alt="Vienna Office Tower"
                   width={600}
                   height={400}
                   className="rounded-2xl shadow-lg w-full h-auto"
@@ -294,33 +379,34 @@ export default function GoldberWebsite() {
               </div>
             </div>
           </div>
-
-          {/* Project 3 */}
-          <div className="mb-20">
-            <div className="space-y-6">
-              <p className="text-sm font-medium text-slate-400 tracking-wide uppercase">PROJECT 3</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-400">Budapest Hotel</h2>
-              <p className="text-slate-400 text-lg">2025</p>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Green Energy Projects - Project Showcase Style */}
-      <section id="energy" className="py-20 bg-white">
+      {/* Green Energy Projects */}
+      <section id="green-energy" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mb-16">
+            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">GREEN ENERGY</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Sustainable Energy Investments
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl">
+              Leading the transition to renewable energy through strategic investments in solar farms and wind parks 
+              across Europe.
+            </p>
+          </div>
+
           {/* Solar Project */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">SOLAR PROJECT 1</p>
+                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">SOLAR PROJECT</p>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Czech Solar Farm</h2>
                 <p className="text-slate-600 text-lg">2024</p>
 
                 <p className="text-slate-600 leading-relaxed text-lg max-w-lg">
-                  Goldber is a green tech industrial investment company based in Czech Republic, focusing on clean
-                  energy technology and industrial innovation. We invest in various areas, including solar and wind
-                  parks.
+                  Large-scale solar installation in South Moravia, generating clean energy for thousands of households 
+                  while contributing to Czech Republic's renewable energy goals.
                 </p>
 
                 <div className="grid grid-cols-3 gap-8 pt-4">
@@ -354,15 +440,14 @@ export default function GoldberWebsite() {
           {/* Wind Project */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">WIND PROJECT 1</p>
+              <div className="space-y-6 lg:order-2">
+                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">WIND PROJECT</p>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Alpine Wind Park</h2>
                 <p className="text-slate-600 text-lg">2023</p>
 
                 <p className="text-slate-600 leading-relaxed text-lg max-w-lg">
-                  Goldber is a green tech industrial investment company based in Czech Republic, focusing on clean
-                  energy technology and industrial innovation. We invest in various areas, including solar and wind
-                  parks.
+                  Strategic wind energy installation in the Austrian Alps, harnessing mountain winds to generate 
+                  sustainable electricity for the regional power grid.
                 </p>
 
                 <div className="grid grid-cols-3 gap-8 pt-4">
@@ -376,14 +461,14 @@ export default function GoldberWebsite() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-slate-500 mb-2">Technology</p>
-                    <p className="text-slate-900 font-medium">Wind Turbines, Onshore</p>
+                    <p className="text-slate-900 font-medium">Wind Turbines</p>
                   </div>
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative lg:order-1">
                 <Image
-                  src="/placeholder-2edxb.png"
+                  src="/placeholder-mvmp7.png"
                   alt="Alpine Wind Park"
                   width={600}
                   height={400}
@@ -395,28 +480,34 @@ export default function GoldberWebsite() {
         </div>
       </section>
 
-      {/* Luxury Cars - Project Showcase Style */}
+      {/* Luxury Car Rentals */}
       <section id="luxury-cars" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mb-16">
+            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">LUXURY CARS</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Premium Automotive Experience
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl">
+              Exclusive access to the world's most prestigious supercars. Ferrari, McLaren, and Lamborghini vehicles 
+              available for rental with premium service.
+            </p>
+          </div>
+
           {/* Ferrari Collection */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">LUXURY FLEET 1</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Ferrari Collection</h2>
-                <p className="text-slate-600 text-lg">2024</p>
+                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">FERRARI COLLECTION</p>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Italian Excellence</h2>
+                <p className="text-slate-600 text-lg">Available Now</p>
 
                 <p className="text-slate-600 leading-relaxed text-lg max-w-lg">
-                  Goldber is a luxury automotive rental company based in Czech Republic, focusing on premium vehicle
-                  experiences and exceptional service. We offer various high-end vehicles, including Ferrari and McLaren
-                  supercars.
+                  Experience the pinnacle of Italian automotive engineering with our curated Ferrari collection, 
+                  featuring the latest models and classic favorites.
                 </p>
 
                 <div className="grid grid-cols-3 gap-8 pt-4">
-                  <div>
-                    <p className="text-sm font-medium text-slate-500 mb-2">Location</p>
-                    <p className="text-slate-900 font-medium">Prague, Czech Republic</p>
-                  </div>
                   <div>
                     <p className="text-sm font-medium text-slate-500 mb-2">Fleet Size</p>
                     <p className="text-slate-900 font-medium">8 Vehicles</p>
@@ -424,6 +515,10 @@ export default function GoldberWebsite() {
                   <div>
                     <p className="text-sm font-medium text-slate-500 mb-2">Models</p>
                     <p className="text-slate-900 font-medium">488 GTB, F8 Tributo</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500 mb-2">Location</p>
+                    <p className="text-slate-900 font-medium">Prague</p>
                   </div>
                 </div>
               </div>
@@ -443,34 +538,33 @@ export default function GoldberWebsite() {
           {/* McLaren Collection */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">LUXURY FLEET 2</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">McLaren Performance</h2>
-                <p className="text-slate-600 text-lg">2024</p>
+              <div className="space-y-6 lg:order-2">
+                <p className="text-sm font-medium text-slate-500 tracking-wide uppercase">MCLAREN COLLECTION</p>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">British Precision</h2>
+                <p className="text-slate-600 text-lg">Available Now</p>
 
                 <p className="text-slate-600 leading-relaxed text-lg max-w-lg">
-                  Goldber is a luxury automotive rental company based in Czech Republic, focusing on premium vehicle
-                  experiences and exceptional service. We offer various high-end vehicles, including Ferrari and McLaren
-                  supercars.
+                  Discover the perfect blend of Formula 1 technology and luxury with our McLaren supercar collection, 
+                  engineered for ultimate performance.
                 </p>
 
                 <div className="grid grid-cols-3 gap-8 pt-4">
-                  <div>
-                    <p className="text-sm font-medium text-slate-500 mb-2">Location</p>
-                    <p className="text-slate-900 font-medium">Prague, Czech Republic</p>
-                  </div>
                   <div>
                     <p className="text-sm font-medium text-slate-500 mb-2">Fleet Size</p>
                     <p className="text-slate-900 font-medium">6 Vehicles</p>
                   </div>
                   <div>
                     <p className="text-sm font-medium text-slate-500 mb-2">Models</p>
-                    <p className="text-slate-900 font-medium">720S, Artura Hybrid</p>
+                    <p className="text-slate-900 font-medium">720S, Artura</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500 mb-2">Location</p>
+                    <p className="text-slate-900 font-medium">Prague</p>
                   </div>
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative lg:order-1">
                 <Image
                   src="/orange-mclaren-garage.png"
                   alt="McLaren Collection"
@@ -486,109 +580,58 @@ export default function GoldberWebsite() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-slate-100 text-slate-700">Get In Touch</Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Contact Goldber Real Estate</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Ready to explore investment opportunities or experience luxury? Our team is here to assist you.
+            <p className="text-sm font-medium text-slate-500 mb-4 tracking-wide uppercase">CONTACT</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Get in Touch</h2>
+            <p className="text-xl text-slate-600">
+              Ready to start your green energy journey? Contact us today.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Prague Office</div>
-                      <div className="text-slate-600">Wenceslas Square 1, 110 00 Prague 1, Czech Republic</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Phone</div>
-                      <div className="text-slate-600">+420 123 456 789</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Email</div>
-                      <div className="text-slate-600">info@goldber-realestate.cz</div>
-                    </div>
-                  </div>
+          <Card className="border-0 shadow-lg max-w-2xl mx-auto">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl">Send us a Message</CardTitle>
+              <CardDescription>We'll get back to you within 24 hours</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm font-medium text-slate-700 mb-2 block">First Name</label>
+                  <Input placeholder="John" className="border-slate-300 focus:border-green-500" />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-slate-700 mb-2 block">Last Name</label>
+                  <Input placeholder="Doe" className="border-slate-300 focus:border-green-500" />
                 </div>
               </div>
-
               <div>
-                <h4 className="text-lg font-semibold text-slate-900 mb-4">Business Hours</h4>
-                <div className="space-y-2 text-slate-600">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>By Appointment</span>
-                  </div>
-                </div>
+                <label className="text-sm font-medium text-slate-700 mb-2 block">Email</label>
+                <Input type="email" placeholder="john@example.com" className="border-slate-300 focus:border-green-500" />
               </div>
-            </div>
-
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
-                <CardDescription>We'll get back to you within 24 hours</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-slate-700 mb-2 block">First Name</label>
-                    <Input placeholder="John" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-slate-700 mb-2 block">Last Name</label>
-                    <Input placeholder="Doe" />
-                  </div>
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-slate-700 mb-2 block">Email</label>
-                  <Input type="email" placeholder="john@example.com" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-slate-700 mb-2 block">Interest</label>
-                  <select className="w-full p-3 border border-slate-200 rounded-md">
-                    <option>Real Estate Investment</option>
-                    <option>Green Energy Projects</option>
-                    <option>Luxury Car Rental</option>
-                    <option>General Inquiry</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-slate-700 mb-2 block">Message</label>
-                  <textarea
-                    className="w-full p-3 border border-slate-200 rounded-md h-32 resize-none"
-                    placeholder="Tell us about your investment goals or rental needs..."
-                  ></textarea>
-                </div>
-                <Button className="w-full bg-slate-900 hover:bg-slate-800">Send Message</Button>
-              </CardContent>
-            </Card>
-          </div>
+              <div>
+                <label className="text-sm font-medium text-slate-700 mb-2 block">Interest</label>
+                <select className="w-full p-3 border border-slate-300 rounded-md focus:border-green-500 focus:outline-none">
+                  <option>Green Energy Solutions</option>
+                  <option>Hydropower Projects</option>
+                  <option>Wind Park Development</option>
+                  <option>Solar Energy Systems</option>
+                  <option>Battery Storage Solutions</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+              <div>
+                <label className="text-sm font-medium text-slate-700 mb-2 block">Message</label>
+                <textarea
+                  className="w-full p-3 border border-slate-300 rounded-md h-32 resize-none focus:border-green-500 focus:outline-none"
+                  placeholder="Tell us about your green energy project needs..."
+                ></textarea>
+              </div>
+              <Button className="w-full bg-black hover:bg-gray-800 text-white py-3">
+                Send Message
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -598,15 +641,17 @@ export default function GoldberWebsite() {
           <div className="grid lg:grid-cols-4 gap-8">
             {/* Company Info - Left Side */}
             <div className="lg:col-span-1">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">G</span>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center">
+                  <div className="text-white font-bold text-lg">G</div>
                 </div>
-                <div className="text-xl font-bold text-slate-900">Goldber Real Estate</div>
+                <div>
+                  <div className="text-xl font-bold text-slate-900">Goldber Real Estate</div>
+                  <div className="text-sm text-slate-600">s.r.o.</div>
+                </div>
               </div>
               <p className="text-slate-600 mb-8 max-w-xs">
-                We make premium investments ridiculously accessible. In real estate, green energy, and luxury automotive
-                sectors across Europe.
+                Diversified investment company specializing in real estate, green energy, and luxury automotive sectors across Europe.
               </p>
               <div className="space-y-2">
                 <p className="text-sm text-slate-500">Follow us on:</p>
@@ -658,15 +703,12 @@ export default function GoldberWebsite() {
                   </li>
                   <li>
                     <a href="#about" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
-                      About Us
+                      Why Us
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#real-estate"
-                      className="text-slate-700 hover:text-slate-900 transition-colors font-medium"
-                    >
-                      Investments
+                    <a href="#" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      Deals
                     </a>
                   </li>
                 </ul>
@@ -674,21 +716,18 @@ export default function GoldberWebsite() {
               <div>
                 <ul className="space-y-4">
                   <li>
-                    <a href="#energy" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
-                      Green Energy
+                    <a href="#service" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      Service
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#luxury-cars"
-                      className="text-slate-700 hover:text-slate-900 transition-colors font-medium"
-                    >
-                      Luxury Cars
+                    <a href="#" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      Case Studies
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
-                      Portfolio
+                    <a href="#" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      Plan
                     </a>
                   </li>
                 </ul>
@@ -696,18 +735,18 @@ export default function GoldberWebsite() {
               <div>
                 <ul className="space-y-4">
                   <li>
-                    <a href="#contact" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
-                      Contact
+                    <a href="#testimonial" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      Testimonial
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
-                      Careers
+                    <a href="#about" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      About
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
-                      News
+                    <a href="#faq" className="text-slate-700 hover:text-slate-900 transition-colors font-medium">
+                      FAQ
                     </a>
                   </li>
                 </ul>
