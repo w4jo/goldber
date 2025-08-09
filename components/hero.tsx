@@ -11,9 +11,9 @@ export default function Hero() {
       className="relative isolate"
       id="top"
     >
-      <div className="wrapper relative py-2 sm:py-4">
+      <div className="wrapper relative px-0! py-0 sm:py-20">
         {/* Hero card */}
-        <div className="relative overflow-hidden rounded-[1.25rem] border bg-card/40 shadow-xl">
+        <div className="relative overflow-hidden rounded-b-[1.25rem] border bg-card/40 shadow-xl md:rounded-[1.25rem]">
           <Image
             alt="Green landscape background"
             className="object-cover"
@@ -30,17 +30,20 @@ export default function Hero() {
           />
 
           {/* Content */}
-          <div className="relative px-6 py-10 sm:px-10 sm:py-20 lg:py-40">
+          <div className="relative px-6 pt-30 pb-40">
             <div className="max-w-2xl">
               <h1
-                className={cn('animate-fade-in text-white', TYPO.h1)}
+                className={cn(
+                  'animate-fade-in text-balance text-white',
+                  TYPO.h1,
+                )}
                 id="hero-heading"
               >
                 We invest where life and work meet
               </h1>
               <p
                 className={cn(
-                  'mt-4 max-w-xl animate-fade-in text-white/90',
+                  'mt-4 max-w-xl animate-fade-in text-balance text-white/90',
                   TYPO.body,
                 )}
               >
@@ -66,7 +69,7 @@ export default function Hero() {
         </div>
         {/* Stats strip: static on mobile, floating on md+ */}
         <div className="px-6 pb-4 sm:px-10 md:px-0">
-          <div className="md:pointer-events-none md:absolute md:inset-x-8 md:bottom-4 md:mx-auto md:max-w-4xl md:translate-y-1/3">
+          <div className="-mt-28 md:pointer-events-none md:inset-x-8 md:bottom-4 md:mx-auto md:max-w-4xl md:translate-y-1/3">
             <div className="pointer-events-auto mx-auto grid grid-cols-1 gap-4 rounded-2xl bg-white/85 p-4 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/70 sm:grid-cols-3">
               {METRICS.map((m) => (
                 <div

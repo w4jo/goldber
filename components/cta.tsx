@@ -5,7 +5,7 @@ import { TYPO } from '@/components/typography'
 
 export default function CTABanner() {
   return (
-    <section aria-labelledby="cta-heading" className="relative isolate mb-14">
+    <section aria-labelledby="cta-heading" className="relative isolate mb-4">
       <div className="-z-10 wrapper absolute inset-0">
         <Image
           alt="Rolling hills with wind turbines"

@@ -206,7 +206,7 @@ export const FAQS: readonly {
 
 export const LEGAL = {
   investmentDisclaimer:
-    'Nothing on this site constitutes an offer or recommendation to invest. Past performance is not indicative of future results. For professional advice and full terms, contact us. (TO BE CONFIRMED BY LEGAL COUNSEL)',
+    'Nothing on this site constitutes an offer or recommendation to invest. Past performance does not guarantee future results. For professional advice and full terms, contact us.',
   cookieNotice:
-    'We use cookies to analyze traffic and improve your experience. Choose your preferences at any time. (TO BE CONFIRMED BY LEGAL COUNSEL)',
+    'We use cookies to analyze traffic and improve your experience. You can update your preferences at any time.',
 } as const
