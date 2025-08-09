@@ -17,6 +17,7 @@ export default function Hero() {
           <Image
             alt="Green landscape background"
             className="object-cover"
+            fetchPriority="high"
             fill
             placeholder="empty"
             priority
