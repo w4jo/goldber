@@ -1,0 +1,98 @@
+---
+alwaysApply: true
+---
+# @voluspalabs/lib — What you can use
+
+This package provides small, tree‑shakable React hooks and utility helpers.
+
+- **Import style**: Use subpath imports with named exports. There is no top‑level barrel.
+  - Example: `import { useDebounce } from '@voluspalabs/lib/hooks/use-debounce'`
+  - Example: `import { cn } from '@voluspalabs/lib/utils/cn'`
+- **Client hooks**: All hooks are client‑only. In Next.js App Router, use them in client components.
+
+## Hooks
+
+- `@voluspalabs/lib/hooks/use-copy-to-clipboard`
+  - Export: `useCopyToClipboard()`
+  - Returns `{ text, copy, isCopied }`
+  - `await copy(text, { timeout?: number; withToast?: boolean })` → `boolean`
+  - Notes: uses `navigator.clipboard`; `withToast` uses `sonner`.
+
+- `@voluspalabs/lib/hooks/use-debounce`
+  - Export: `useDebounce<T>(value: T, delay?: number): T`
+
+- `@voluspalabs/lib/hooks/use-hot-key`
+  - Export: `useHotKey(callback: () => void, key: string): void`
+  - Triggers on Ctrl/Cmd + key.
+
+- `@voluspalabs/lib/hooks/use-local-storage`
+  - Export: `useLocalStorage<T>(key: string, initialValue: T): [T, React.Dispatch<React.SetStateAction<T>>]`
+  - JSON serializes to `localStorage` and hydrates on mount.
+
+- `@voluspalabs/lib/hooks/use-media-query`
+  - Export: `useMediaQuery(query: string): boolean`
+
+- `@voluspalabs/lib/hooks/use-mobile`
+  - Export: `useIsMobile(): boolean`
+  - Uses a `(max-width: 767px)` breakpoint.
+
+## Utilities
+
+- `@voluspalabs/lib/utils/cn`
+  - Export: `cn(...inputs: ClassValue[]): string` (clsx + tailwind-merge)
+
+- `@voluspalabs/lib/utils/format`
+  - Exports:
+    - `formatDateTime(value: Date | string | number): string`
+    - `formatDate(value: Date | string | number): string`
+    - `formatLatency(ms: number): string` (e.g., `1.2s` or `123ms`)
+    - `formatMilliseconds(value: number): string`
+    - `formatCompactNumber(value: number): string` (e.g., `1.5k`, `2.0M`)
+    - `formatRelativeTime(date: Date | string): string` (e.g., `5 minutes ago`)
+
+- `@voluspalabs/lib/utils/is-array`
+  - Type guards:
+    - `isArrayOfNumbers(value: unknown): value is number[]`
+    - `isArrayOfDates(value: unknown): value is Date[]`
+    - `isArrayOfStrings(value: unknown): value is string[]`
+    - `isArrayOfBooleans(value: unknown): value is boolean[]`
+
+- `@voluspalabs/lib/utils/try`
+  - Export: `handleAsync<T>(promise: Promise<T>): Promise<{ ok: boolean; value: T | null; error: Error | null }>`
+
+## Quick examples
+
+```tsx
+import { cn } from '@voluspalabs/lib/utils/cn'
+import { useDebounce } from '@voluspalabs/lib/hooks/use-debounce'
+import { formatRelativeTime } from '@voluspalabs/lib/utils/format'
+import { handleAsync } from '@voluspalabs/lib/utils/try'
+
+const Example = () => {
+  const [term, setTerm] = React.useState('')
+  const debounced = useDebounce(term, 300)
+
+  React.useEffect(() => {
+    // fetch using debounced
+  }, [debounced])
+
+  return <div className={cn('px-4 py-2', { 'opacity-50': !term })}>{formatRelativeTime(new Date())}</div>
+}
+
+async function load() {
+  const { ok, value, error } = await handleAsync(fetch('/api').then(r => r.json()))
+  if (!ok) console.error(error)
+  return value
+}
+```
+
+## Best practices
+
+- Prefer subpath imports shown above; do not deep‑import from `dist/` or `src/`.
+- Use named imports; no default exports are provided by this package.
+- Hooks are client‑only; ensure they run in the browser.
+- Utilities are pure and tree‑shakeable; unused exports are dropped.
+
+## Links
+
+- GitHub: [voluspalabs/lib](https://github.com/voluspalabs/lib)

@@ -1,0 +1,39 @@
+---
+alwaysApply: true
+---
+# Cursor Instructions for this Repo
+You are an expert in TypeScript, ShadCN, Tailwind, and NextJS framework for scalable web development.
+Goal: Help AI agents work productively in this NextJS 15 site by following the project’s actual patterns and workflows.
+
+## Key Principles
+- Leverage Astro's partial hydration and multi-framework support effectively.
+- Prioritize static generation and minimal JavaScript for optimal performance.
+- Use descriptive variable names and follow NextJS's naming conventions.
+
+## Project snapshot
+- Framework: NextJS 15 (ESM). Package manager/runtime: Bun (bun.lock committed).
+- Linting/formatting: Biome via `@voluspalabs/lint` preset.
+
+## Core workflows (use Bun)
+- Install: `bun install`
+- Dev server: `bun run dev` (NextJS at http://localhost:4000)
+- Build: `bun run build` → `dist/`
+- Lint: `bun run lint` (check) • Auto-fix: `bun run lint:fix`
+
+## Tailwind 4 CSS Best Practices
+- Use Tailwind utility classes extensively in your NextJS components.
+- Leverage Tailwind's responsive design utilities (sm:, md:, lg:, etc.).
+- Utilize Tailwind's color palette and spacing scale for consistency.
+- Never use the @apply directive
+
+## Accessibility
+- Ensure proper semantic HTML structure in Astro components.
+- Implement ARIA attributes where necessary.
+- Ensure keyboard navigation support for interactive elements.
+
+## Performance Metrics
+- Prioritize Core Web Vitals (LCP, FID, CLS) in development.
+- Use Lighthouse and WebPageTest for performance auditing.
+- Implement performance budgets and monitoring.
+
+If anything above seems off or incomplete for your task (e.g., you need SSR/adapters, testing setup, or additional integrations), ask for confirmation before introducing new tooling or patterns.
