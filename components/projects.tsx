@@ -1,6 +1,5 @@
-import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { PROJECTS } from './content'
 
 export default function FeaturedProjects() {
@@ -16,35 +15,33 @@ export default function FeaturedProjects() {
       <div className="mt-8 space-y-10">
         {PROJECTS.map((p) => (
           <article
-            className="grid grid-cols-1 gap-6 rounded-2xl bg-card p-4 shadow lg:grid-cols-2 lg:gap-10 lg:p-6"
+            className="grid grid-cols-1 items-stretch gap-8 rounded-2xl border border-border bg-card/80 p-6 shadow-card lg:grid-cols-2 lg:gap-12 lg:p-8"
             key={p.id}
           >
-            <div className="order-2 lg:order-1">
-              <div className={`text-foreground/60 ${TYPO.micro}`}>
-                Project {p.number}
+            <div className="order-2 flex min-h-full flex-col lg:order-1">
+              <div>
+                <div
+                  className={`text-foreground/60 uppercase tracking-wider ${TYPO.micro}`}
+                >
+                  Project {p.number}
+                </div>
+                <h3 className={`mt-1 ${TYPO.h3}`}>{p.title}</h3>
               </div>
-              <h3 className={`mt-1 ${TYPO.h3}`}>{p.title}</h3>
-              <p className={`mt-3 text-foreground/80 ${TYPO.body}`}>
-                {p.description}
-              </p>
-              <dl className={`mt-4 grid grid-cols-3 gap-2 ${TYPO.small}`}>
+              <div className="flex flex-1 items-center">
+                <p className={`text-foreground/80 ${TYPO.body}`}>
+                  {p.description}
+                </p>
+              </div>
+              <dl
+                className={`mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-3 ${TYPO.small}`}
+              >
                 {p.meta.map((m) => (
-                  <div className="rounded-lg bg-muted px-3 py-2" key={m.label}>
+                  <div key={m.label}>
                     <dt className="text-foreground/60">{m.label}</dt>
-                    <dd className="font-medium">{m.value}</dd>
+                    <dd className="mt-0.5 font-medium">{m.value}</dd>
                   </div>
                 ))}
               </dl>
-              <div className="mt-4">
-                <Button
-                  className="rounded-full"
-                  size="sm"
-                  type="button"
-                  variant="secondary"
-                >
-                  View details
-                </Button>
-              </div>
             </div>
             <div className="order-1 lg:order-2">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md">
@@ -52,6 +49,7 @@ export default function FeaturedProjects() {
                   alt={p.title}
                   className="object-cover"
                   fill
+                  placeholder="empty"
                   sizes="(min-width:1024px) 40rem, 100vw"
                   src={p.image}
                 />

@@ -4,7 +4,7 @@
 
 @plugin 'tailwindcss-animate';
 
-@source "../../node_modules/@voluspalabs/ui";
+@source "../node_modules/@voluspalabs/ui";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -270,16 +270,11 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: hsl(var(--border));
+    border-color: var(--color-border);
   }
 
   body {
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     font-synthesis: none;
   }
 }
@@ -320,140 +315,8 @@
     }
   }
 
-  .mobile-navigation-spacing {
-    margin: 0;
-    @media all and (display-mode: standalone) {
-      /* bottom: 0; */
-      /* bottom: env(safe-area-inset-bottom); */
-      bottom: 1rem;
-    }
-  }
-
-  .drawer-safe-spacing {
-    padding-bottom: 1rem;
-    @media all and (display-mode: standalone) {
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-  }
-
-  .area-with-navigation {
-    @media (max-width: 1024px) {
-      /* 1rem is the minimum padding for the wrapper bottom for showing content properly */
-      padding-bottom: calc(env(safe-area-inset-bottom) + 50px + 1.5rem);
-      padding-left: max(1rem, env(safe-area-inset-left));
-      padding-right: max(1rem, env(safe-area-inset-right));
-      padding-top: calc(env(safe-area-inset-top) + 128px);
-    }
-  }
-
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 0;
-    height: 100vh; /* Fallback for browsers that don't support dvh */
-    /* background-color: var(--card); */
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    will-change: scroll;
-    touch-action: pan-y;
-    border: 0;
-    user-select: none;
-    -webkit-touch-callout: none;
-
-    @media (min-width: 1024px) {
-      height: calc(100vh - 56px);
-      border-radius: 0.75rem;
-      /* border: 1px solid var(--border); */
-    }
-
-    @supports (height: 100lvh) {
-      height: 100lvh;
-
-      @media (min-width: 1024px) {
-        height: calc(100lvh - 56px);
-      }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      transition:
-        height 200ms,
-        opacity 200ms;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-
-    scrollbar-width: thin;
-    scrollbar-color: var(--scrollbar) transparent;
-
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--scrollbar);
-      border-radius: 3px;
-    }
-  }
-
-  .safe-top {
-    padding-top: env(safe-area-inset-top);
-  }
-
-  .safe-left {
-    padding-left: env(safe-area-inset-left);
-  }
-
-  .safe-right {
-    padding-right: env(safe-area-inset-right);
-  }
-
-  .safe-bottom {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  /* iOS safe area support for dialogs */
-  .mobile-dialog-safe {
-    @media (max-width: 767px) {
-      padding-top: env(safe-area-inset-top);
-      padding-bottom: env(safe-area-inset-bottom);
-      padding-left: env(safe-area-inset-left);
-      padding-right: env(safe-area-inset-right);
-    }
-  }
-
-  .safe-m-top {
-    margin-top: env(safe-area-inset-top);
-  }
-
-  .safe-m-bottom {
-    margin-bottom: env(safe-area-inset-bottom);
-  }
-
   .animate-fade-in {
     animation: fade-in 0.3s ease-out forwards;
-  }
-
-  .animate-slide-up {
-    animation: slide-up 0.5s ease-out forwards;
-  }
-
-  .bg-grid-pattern {
-    background-size: 12px 12px;
-    background-image: radial-gradient(
-      circle at 2px 2px,
-      var(--color-muted-foreground) 2px,
-      transparent 0
-    );
-    opacity: 0.2;
   }
 
   .no-scrollbar::-webkit-scrollbar {
@@ -466,11 +329,4 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+/* Tailwind v4: avoid @apply in global layers */

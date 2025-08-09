@@ -1,5 +1,5 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { SERVICES } from './content'
 
 const toneToClass: Record<(typeof SERVICES)[number]['tone'], string> = {
@@ -13,7 +13,7 @@ export default function ServicesGrid() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="wrapper py-16 sm:py-24"
+      className="wrapper rounded-3xl bg-white py-12 sm:py-10"
       id="services"
     >
       <h2 className={TYPO.h2} id="services-heading">
@@ -22,7 +22,10 @@ export default function ServicesGrid() {
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         {SERVICES.map((s) => (
           <a
-            className={cn('group rounded-2xl p-6 shadow', toneToClass[s.tone])}
+            className={cn(
+              'group rounded-2xl p-6 shadow md:px-16 md:py-14',
+              toneToClass[s.tone],
+            )}
             href={s.href}
             key={s.id}
           >
@@ -35,15 +38,7 @@ export default function ServicesGrid() {
                 →
               </span>
             </div>
-            <p
-              className={cn(
-                'mt-2 text-foreground/80',
-                `${TYPO.small}/6`,
-                toneToClass[s.tone],
-              )}
-            >
-              {s.blurb}
-            </p>
+            <p className={cn('mt-2', `${TYPO.small}/6`)}>{s.blurb}</p>
             <span
               className={`mt-4 inline-flex items-center gap-1 font-medium underline underline-offset-4 ${TYPO.small}`}
             >

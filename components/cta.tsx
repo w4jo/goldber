@@ -1,18 +1,19 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
 import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 
 export default function CTABanner() {
   return (
-    <section aria-labelledby="cta-heading" className="relative isolate">
-      <div className="-z-10 absolute inset-0">
+    <section aria-labelledby="cta-heading" className="relative isolate mb-14">
+      <div className="-z-10 wrapper absolute inset-0">
         <Image
           alt="Rolling hills with wind turbines"
-          className="object-cover"
+          className="rounded-3xl object-cover"
           fill
+          placeholder="empty"
           sizes="100vw"
-          src="/placeholder.svg"
+          src="/images/green-building.avif"
         />
       </div>
 

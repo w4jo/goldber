@@ -1,7 +1,7 @@
 'use client'
 import { useLocalStorage } from '@voluspalabs/lib/hooks/use-local-storage'
 import { Button } from '@voluspalabs/ui/button'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { LEGAL } from './content'
 
 export default function CookieConsent() {

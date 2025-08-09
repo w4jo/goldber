@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Geist_Mono, Inter } from 'next/font/google'
+import { Suspense } from 'react'
 import './globals.css'
-import { ORG } from './sections/content'
-import CookieConsent from './sections/cookie-consent'
+import { ORG } from '@/components/content'
+import CookieConsent from '@/components/cookie-consent'
 
 const geistSans = Inter({
   variable: '--font-geist-sans',
@@ -41,8 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background font-sans text-foreground antialiased`}
       >
+        <a
+          className="sr-only fixed top-2 left-2 z-50 rounded bg-foreground px-3 py-2 text-background focus:not-sr-only"
+          href="#main"
+        >
+          Skip to content
+        </a>
         {/* JSON-LD */}
         {(() => {
           const jsonLd = {
@@ -65,7 +72,9 @@ export default function RootLayout({
           )
         })()}
         {children}
-        <CookieConsent />
+        <Suspense fallback={null}>
+          <CookieConsent />
+        </Suspense>
       </body>
     </html>
   )

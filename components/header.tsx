@@ -1,7 +1,7 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
 import { Button } from '@voluspalabs/ui/button'
 import Link from 'next/link'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { NAV_ITEMS, ORG } from './content'
 
 export default function Header() {
@@ -17,7 +17,10 @@ export default function Header() {
           <span>Goldber</span>
         </Link>
 
-        <nav className="pointer-events-auto mx-auto hidden rounded-full bg-white/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 md:block">
+        <nav
+          aria-label="Primary"
+          className="pointer-events-auto mx-auto hidden rounded-full bg-white/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 md:block"
+        >
           <ul className={cn('flex items-center gap-3', TYPO.small)}>
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>

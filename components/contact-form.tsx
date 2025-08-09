@@ -4,7 +4,7 @@ import { Button } from '@voluspalabs/ui/button'
 import { Input } from '@voluspalabs/ui/input'
 import { Textarea } from '@voluspalabs/ui/textarea'
 import * as React from 'react'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 
 interface FormState {
   readonly fullName: string
@@ -68,6 +68,7 @@ export default function ContactForm() {
       </p>
 
       <form
+        aria-busy={isSubmitting}
         className="mt-6 grid grid-cols-1 gap-4 rounded-2xl border bg-card p-6 shadow md:grid-cols-2"
         onSubmit={onSubmit}
         ref={formRef}
@@ -146,6 +147,7 @@ export default function ContactForm() {
 
         {status === 'success' && (
           <output
+            aria-live="polite"
             className={`rounded-lg bg-[--brand-bg-soft] p-3 text-foreground ${TYPO.small} md:col-span-2`}
           >
             Your message has been sent.
@@ -153,6 +155,7 @@ export default function ContactForm() {
         )}
         {status === 'error' && (
           <output
+            aria-live="polite"
             className={`rounded-lg bg-red-50 p-3 text-red-800 ${TYPO.small} md:col-span-2`}
           >
             We could not send your message. Please try again later.

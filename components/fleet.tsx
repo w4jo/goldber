@@ -1,6 +1,6 @@
 import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { FLEET } from './content'
 
 export default function FleetCarousel() {
@@ -25,6 +25,7 @@ export default function FleetCarousel() {
                   alt={car.model}
                   className="object-cover"
                   fill
+                  placeholder="empty"
                   sizes="288px"
                   src={car.image}
                 />

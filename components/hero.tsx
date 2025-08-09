@@ -1,7 +1,7 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
 import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { METRICS } from './content'
 
 export default function Hero() {
@@ -18,14 +18,15 @@ export default function Hero() {
             alt="Green landscape background"
             className="object-cover"
             fill
+            placeholder="empty"
             priority
             sizes="100vw"
-            src="/placeholder.svg"
+            src="/images/wind-turbines-1.avif"
           />
           {/* Readability gradient */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent"
+            className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-transparent"
           />
 
           {/* Content */}

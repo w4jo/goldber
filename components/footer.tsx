@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { TYPO } from '../typography'
+import { TYPO } from '@/components/typography'
 import { LEGAL, NAV_ITEMS, ORG } from './content'
 
 export default function Footer() {

@@ -11,7 +11,6 @@ export const NAV_ITEMS = [
   { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
   { id: 'fleet', label: 'Fleet' },
-  { id: 'insights', label: 'Insights' },
   { id: 'faq', label: 'FAQ' },
   { id: 'contact', label: 'Contact' },
 ] as const
@@ -33,43 +32,43 @@ export interface ProjectItem {
 
 export const PROJECTS: readonly ProjectItem[] = [
   {
-    id: 'bespoke-projects',
+    id: 'real-estate',
     number: 1,
-    title: 'Bespoke Projects',
+    title: 'Real Estate',
     description:
-      'Selective industrial and residential investments across Sweden and Central Europe. Focus on durable cash flows and resilient locations. Targeting long-term capital appreciation with measured risk.',
+      'Selective residential and light‑industrial assets across resilient European locations. We pursue durable cash flows, disciplined leverage, and active asset management that compounds over time.',
     meta: [
       { label: 'Location', value: 'Dalarnas, Sweden' },
       { label: 'Size', value: '250 m²' },
       { label: 'Materials', value: 'Oak, Ash, Copper' },
     ],
-    image: '/placeholder.svg',
+    image: '/images/real-estate-eu.avif',
   },
   {
-    id: 'holly-water',
+    id: 'green-energy',
     number: 2,
-    title: 'Holly Water',
+    title: 'Green Energy',
     description:
-      'Green-tech investment concept in Sweden: combining clean energy technologies and modular wood architecture. Flexible layouts for seasonal living, with on-site energy generation.',
+      'Onshore wind and solar paired with storage to deliver stable, long‑term revenues. We favor high‑resource sites with grid access and pragmatic, low‑carbon construction.',
     meta: [
       { label: 'Location', value: 'Dalarnas, Sweden' },
       { label: 'Size', value: '320 m²' },
       { label: 'Materials', value: 'Oak, Ash, Wood-fibre' },
     ],
-    image: '/placeholder.svg',
+    image: '/images/wind-turbines-2.avif',
   },
   {
-    id: 'oak-cabin',
+    id: 'luxury-cars',
     number: 3,
-    title: 'Oak Cabin',
+    title: 'Luxury Cars',
     description:
-      'Compact hillside retreat designed around passive solar principles and low embodied-carbon materials. Includes integrated storage and flexible studio workspace.',
+      'Limited‑run performance vehicles curated for resilience and value retention. Focused on provenance, condition, and long‑term collectability within a balanced portfolio.',
     meta: [
       { label: 'Location', value: 'Dalarnas, Sweden' },
       { label: 'Size', value: '180 m²' },
       { label: 'Materials', value: 'Ash, Copper, Wood fibre' },
     ],
-    image: '/placeholder.svg',
+    image: '/images/lux-cars.avif',
   },
 ]
 
