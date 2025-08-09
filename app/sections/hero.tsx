@@ -29,7 +29,7 @@ export default function Hero() {
           />
 
           {/* Content */}
-          <div className="relative px-6 py-10 sm:px-10 sm:py-14 lg:py-20">
+          <div className="relative px-6 py-10 sm:px-10 sm:py-20 lg:py-40">
             <div className="max-w-2xl">
               <h1
                 className={cn('animate-fade-in text-white', TYPO.h1)}
@@ -50,14 +50,12 @@ export default function Hero() {
                 <Button
                   asChild
                   className="rounded-full bg-white text-foreground hover:bg-white/90"
-                  size="sm"
                 >
                   <a href="#services">Explore opportunities</a>
                 </Button>
                 <Button
                   asChild
-                  className="rounded-full bg-foreground/90 text-white hover:bg-foreground"
-                  size="sm"
+                  className="rounded-full bg-primary text-primary-foreground hover:opacity-90"
                 >
                   <a href="#contact">Contact us</a>
                 </Button>
@@ -75,7 +73,7 @@ export default function Hero() {
                   key={m.label}
                 >
                   <div>
-                    <div className={cn('text-emerald-900', TYPO.stat)}>
+                    <div className={cn('text-primary', TYPO.stat)}>
                       {m.value}
                     </div>
                     <div className={cn('text-foreground/60', TYPO.micro)}>
@@ -84,7 +82,7 @@ export default function Hero() {
                   </div>
                   <span
                     aria-hidden
-                    className="h-2 w-2 rounded-full bg-emerald-500"
+                    className="h-2 w-2 rounded-full bg-primary"
                   />
                 </div>
               ))}

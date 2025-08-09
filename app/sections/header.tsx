@@ -7,13 +7,13 @@ import { NAV_ITEMS, ORG } from './content'
 export default function Header() {
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-40">
-      <div className="wrapper flex items-start justify-between px-12! py-8">
+      <div className="wrapper flex items-center justify-between px-13! py-8">
         <Link
           aria-label={ORG.name}
           className={`pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-2 font-medium text-foreground shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 ${TYPO.small}`}
           href="#top"
         >
-          <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          <span className="h-2 w-2 rounded-full bg-primary" />
           <span>Goldber</span>
         </Link>
 

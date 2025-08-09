@@ -1,11 +1,12 @@
+import { cn } from '@voluspalabs/lib/utils/cn'
 import { TYPO } from '../typography'
 import { SERVICES } from './content'
 
 const toneToClass: Record<(typeof SERVICES)[number]['tone'], string> = {
-  mint: 'bg-emerald-50',
-  lime: 'bg-lime-100',
-  coral: 'bg-orange-100',
-  charcoal: 'bg-slate-900 text-white',
+  mint: 'bg-[var(--brand-bg-soft)] text-background/95',
+  lime: 'bg-[var(--brand-lime)]',
+  coral: 'bg-[var(--brand-coral)] ',
+  charcoal: 'bg-[var(--brand-charcoal)] text-white',
 }
 
 export default function ServicesGrid() {
@@ -21,7 +22,7 @@ export default function ServicesGrid() {
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         {SERVICES.map((s) => (
           <a
-            className={`group rounded-2xl p-6 shadow ${toneToClass[s.tone]}`}
+            className={cn('group rounded-2xl p-6 shadow', toneToClass[s.tone])}
             href={s.href}
             key={s.id}
           >
@@ -34,7 +35,15 @@ export default function ServicesGrid() {
                 →
               </span>
             </div>
-            <p className={`mt-2 opacity-80 ${TYPO.small}/6`}>{s.blurb}</p>
+            <p
+              className={cn(
+                'mt-2 text-foreground/80',
+                `${TYPO.small}/6`,
+                toneToClass[s.tone],
+              )}
+            >
+              {s.blurb}
+            </p>
             <span
               className={`mt-4 inline-flex items-center gap-1 font-medium underline underline-offset-4 ${TYPO.small}`}
             >

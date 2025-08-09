@@ -10,7 +10,7 @@ export default function Footer() {
           <div
             className={`inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 font-semibold shadow ${TYPO.small}`}
           >
-            <span aria-hidden className="h-2 w-2 rounded-full bg-emerald-600" />
+            <span aria-hidden className="h-2 w-2 rounded-full bg-primary" />
             <span>Goldber</span>
           </div>
           <p className={`mt-3 max-w-sm text-foreground/80 ${TYPO.small}`}>

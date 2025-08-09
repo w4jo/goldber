@@ -135,7 +135,7 @@ export default function ContactForm() {
             </a>
           </p>
           <Button
-            className="rounded-full"
+            className="rounded-full bg-primary text-primary-foreground hover:opacity-90"
             disabled={isSubmitting}
             size="sm"
             type="submit"
@@ -146,7 +146,7 @@ export default function ContactForm() {
 
         {status === 'success' && (
           <output
-            className={`rounded-lg bg-emerald-50 p-3 text-emerald-800 ${TYPO.small} md:col-span-2`}
+            className={`rounded-lg bg-[--brand-bg-soft] p-3 text-foreground ${TYPO.small} md:col-span-2`}
           >
             Your message has been sent.
           </output>
