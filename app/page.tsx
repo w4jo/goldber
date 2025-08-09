@@ -7,6 +7,8 @@ import Hero from '@/components/hero'
 import FeaturedProjects from '@/components/projects'
 import ServicesGrid from '@/components/services'
 
+export const dynamic = 'force-static'
+
 export default function Home() {
   return (
     <>

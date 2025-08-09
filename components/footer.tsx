@@ -1,7 +1,12 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
-import Link from 'next/link'
 import { TYPO } from '@/components/typography'
 import { LEGAL, NAV_ITEMS, ORG } from './content'
+
+const LINK_ITEM_CLASS =
+  'group flex items-center justify-between rounded-xl px-3 py-2 text-foreground/90 hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+const LINK_LABEL_CLASS = cn('font-medium', TYPO.small)
+const LINK_ARROW_CLASS =
+  'ml-2 text-foreground/50 transition-transform group-hover:translate-x-0.5 group-focus-visible:translate-x-0.5'
 
 export default function Footer() {
   return (
@@ -27,12 +32,15 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Footer navigation">
-            <ul className={cn('grid grid-cols-2 gap-2', TYPO.small)}>
+            <ul className="grid grid-cols-2 gap-2">
               {NAV_ITEMS.filter((n) => n.id !== 'faq').map((item) => (
                 <li key={item.id}>
-                  <Link className="hover:underline" href={`#${item.id}`}>
-                    {item.label}
-                  </Link>
+                  <a className={LINK_ITEM_CLASS} href={`#${item.id}`}>
+                    <span className={LINK_LABEL_CLASS}>{item.label}</span>
+                    <span aria-hidden className={LINK_ARROW_CLASS}>
+                      →
+                    </span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -44,12 +52,9 @@ export default function Footer() {
               <div className="mt-1 text-foreground/80">
                 <div>{ORG.address}</div>
                 <div>
-                  <Link
-                    className="underline"
-                    href="mailto:hello@goldber.example"
-                  >
+                  <a className="underline" href="mailto:hello@goldber.example">
                     {ORG.email}
-                  </Link>
+                  </a>
                 </div>
                 <div>{ORG.phone}</div>
               </div>

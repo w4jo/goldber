@@ -13,6 +13,7 @@
   "dependencies": {
     "@voluspalabs/lib": "^0.0.25",
     "@voluspalabs/ui": "^0.0.104",
+    "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "next": "15.4.6",
     "react": "19.1.1",
     "react-dom": "19.1.1",

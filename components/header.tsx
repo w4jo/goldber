@@ -8,7 +8,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@voluspalabs/ui/drawer'
-import Link from 'next/link'
 import { TYPO } from '@/components/typography'
 import { NAV_ITEMS, ORG } from './content'
 
@@ -20,14 +19,14 @@ export default function Header() {
         className="mask-[linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.88)_75%,transparent_100%)] pointer-events-none absolute top-0 z-0 h-20 w-full bg-[linear-gradient(180deg,rgba(221,226,238,0.40)_0%,rgba(221,226,238,0.00)_100%)] backdrop-blur-2xl"
       />
       <div className="wrapper z-10 flex items-center justify-between px-4! py-2 md:px-6!">
-        <Link
+        <a
           aria-label={ORG.name}
           className={`pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 font-medium text-foreground shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 ${TYPO.small}`}
           href="#top"
         >
           <span className="size-2 rounded-full bg-primary" />
           <span>Goldber</span>
-        </Link>
+        </a>
 
         <nav
           aria-label="Primary"
@@ -95,7 +94,9 @@ export default function Header() {
                   <div className={cn('text-foreground/60', TYPO.micro)}>
                     Get in touch
                   </div>
-                  <div className={TYPO.cardTitle}>Let’s talk opportunities</div>
+                  <div className={TYPO.cardTitle}>
+                    Let&apos;s talk opportunities
+                  </div>
                   <DrawerClose asChild>
                     <a
                       className="mt-3 block rounded-xl bg-primary px-3 py-3 text-center text-primary-foreground"
