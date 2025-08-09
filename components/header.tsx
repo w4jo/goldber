@@ -16,12 +16,12 @@ export default function Header() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-40">
       <div
         aria-hidden="true"
-        className="mask-[linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.88)_75%,transparent_100%)] pointer-events-none absolute top-0 z-0 h-20 w-full bg-[linear-gradient(180deg,rgba(221,226,238,0.40)_0%,rgba(221,226,238,0.00)_100%)] backdrop-blur-2xl"
+        className="mask-[linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.88)_75%,transparent_100%)] pointer-events-none absolute top-0 z-0 h-20 w-full animate-fade-in bg-[linear-gradient(180deg,rgba(221,226,238,0.40)_0%,rgba(221,226,238,0.00)_100%)] backdrop-blur-2xl motion-reduce:animate-none"
       />
-      <div className="wrapper z-10 flex items-center justify-between px-4! py-2 md:px-6!">
+      <div className="wrapper z-10 flex animate-scale-in items-center justify-between px-4! py-2 motion-reduce:animate-none md:px-6!">
         <a
           aria-label={ORG.name}
-          className={`pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 font-medium text-foreground shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 ${TYPO.small}`}
+          className={`pointer-events-auto inline-flex animate-scale-in items-center gap-2 rounded-full bg-white px-3 py-2 font-medium text-foreground shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 motion-reduce:animate-none ${TYPO.small}`}
           href="#top"
         >
           <span className="size-2 rounded-full bg-primary" />
@@ -30,7 +30,7 @@ export default function Header() {
 
         <nav
           aria-label="Primary"
-          className="pointer-events-auto z-10 mx-auto hidden rounded-full bg-white/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 md:block"
+          className="pointer-events-auto z-10 mx-auto hidden rounded-full bg-white/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 motion-reduce:animate-none md:block md:animate-scale-in"
         >
           <ul className={cn('flex items-center gap-3', TYPO.small)}>
             {NAV_ITEMS.map((item) => (
@@ -47,11 +47,7 @@ export default function Header() {
         </nav>
 
         <div className="pointer-events-auto hidden md:block">
-          <Button
-            asChild
-            className="rounded-full bg-foreground text-background hover:opacity-90"
-            size="sm"
-          >
+          <Button asChild className="rounded-full" size="sm">
             <a href="#contact">Contact</a>
           </Button>
         </div>

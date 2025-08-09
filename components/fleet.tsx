@@ -7,7 +7,7 @@ export default function FleetCarousel() {
   return (
     <section
       aria-labelledby="fleet-heading"
-      className="wrapper py-16 sm:py-24"
+      className="wrapper animate-scale-in py-16 motion-reduce:animate-none sm:py-24"
       id="fleet"
     >
       <h2 className={TYPO.h2} id="fleet-heading">
@@ -15,9 +15,9 @@ export default function FleetCarousel() {
       </h2>
       <div className="no-scrollbar mt-6 overflow-x-auto">
         <div className="flex min-w-max gap-4">
-          {FLEET.map((car) => (
+          {FLEET.map((car, idx) => (
             <article
-              className="w-72 shrink-0 rounded-2xl bg-card p-3 shadow"
+              className={`w-72 shrink-0 animate-slide-up-sm rounded-2xl bg-card p-3 shadow motion-reduce:animate-none ${idx % 2 === 0 ? 'animate-delay-100' : 'animate-delay-200'}`}
               key={car.model}
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">

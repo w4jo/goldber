@@ -119,12 +119,12 @@ export default function ContactForm() {
   return (
     <section
       aria-labelledby="contact-heading"
-      className="wrapper py-16 sm:py-24"
+      className="wrapper animate-scale-in py-16 motion-reduce:animate-none sm:py-24"
       id="contact"
     >
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2">
         {/* Left: intro and details */}
-        <div className="flex h-full flex-col justify-between">
+        <div className="flex h-full animate-delay-100 animate-slide-up-sm flex-col justify-between motion-reduce:animate-none">
           <div>
             <h2 className={TYPO.h2} id="contact-heading">
               Contact us
@@ -135,7 +135,7 @@ export default function ContactForm() {
             </p>
           </div>
 
-          <div className="mt-6 max-w-md rounded-2xl border bg-card/80 p-4 shadow-card">
+          <div className="mt-6 max-w-md animate-delay-200 animate-slide-up-sm rounded-2xl border bg-card/80 p-4 shadow-card motion-reduce:animate-none">
             <div className={cn('font-medium', TYPO.small)}>Direct contact</div>
             <div className={cn('mt-1 text-foreground/80', TYPO.small)}>
               <div>
@@ -151,7 +151,7 @@ export default function ContactForm() {
         {/* Right: form */}
         <form
           aria-busy={isSubmitting}
-          className="grid grid-cols-1 gap-4 rounded-2xl border bg-card/80 p-6 shadow-card md:grid-cols-2"
+          className="grid animate-delay-100 animate-slide-up-sm grid-cols-1 gap-4 rounded-2xl border bg-card/80 p-6 shadow-card motion-reduce:animate-none md:grid-cols-2"
           noValidate
           onSubmit={onSubmit}
         >

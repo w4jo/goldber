@@ -10,9 +10,9 @@ const LINK_ARROW_CLASS =
 
 export default function Footer() {
   return (
-    <footer className="py-4 pt-0 sm:py-8">
+    <footer className="animate-scale-in py-4 pt-0 motion-reduce:animate-none sm:py-8">
       <div className="wrapper">
-        <div className="grid grid-cols-1 gap-8 rounded-2xl border bg-card/80 p-6 shadow-card md:grid-cols-3 lg:p-8">
+        <div className="grid animate-slide-up-sm grid-cols-1 gap-8 rounded-2xl border bg-card/80 p-6 shadow-card motion-reduce:animate-none md:grid-cols-3 lg:p-8">
           <div>
             <div
               className={cn(

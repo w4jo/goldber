@@ -13,17 +13,18 @@ export default function ServicesGrid() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="wrapper rounded-3xl bg-white py-12 sm:py-10"
+      className="wrapper animate-scale-in rounded-3xl bg-white py-12 motion-reduce:animate-none sm:py-10"
       id="services"
     >
       <h2 className={TYPO.h2} id="services-heading">
         We partner to fast‑track a sustainable future
       </h2>
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-        {SERVICES.map((s) => (
+        {SERVICES.map((s, idx) => (
           <a
             className={cn(
-              'group rounded-2xl p-6 shadow md:px-16 md:py-14',
+              'group animate-slide-up-sm rounded-2xl p-6 shadow motion-reduce:animate-none md:px-16 md:py-14',
+              idx % 2 === 0 ? 'animate-delay-100' : 'animate-delay-200',
               toneToClass[s.tone],
             )}
             href={s.href}
