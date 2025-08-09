@@ -1,5 +1,7 @@
 'use client'
 import { useLocalStorage } from '@voluspalabs/lib/hooks/use-local-storage'
+import { Button } from '@voluspalabs/ui/button'
+import { TYPO } from '../typography'
 import { LEGAL } from './content'
 
 export default function CookieConsent() {
@@ -14,22 +16,25 @@ export default function CookieConsent() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 p-4">
       <div className="mx-auto max-w-3xl rounded-2xl border bg-card p-4 shadow">
-        <p className="text-foreground/80 text-sm">{LEGAL.cookieNotice}</p>
+        <p className={`text-foreground/80 ${TYPO.small}`}>
+          {LEGAL.cookieNotice}
+        </p>
         <div className="mt-3 flex items-center gap-2">
-          <button
-            className="inline-flex items-center rounded-full bg-foreground px-4 py-2 font-medium text-background text-sm shadow hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          <Button
+            className="rounded-full"
             onClick={() => setConsent('accepted')}
             type="button"
           >
             Accept all
-          </button>
-          <button
-            className="inline-flex items-center rounded-full border border-foreground/10 px-4 py-2 font-medium text-sm hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          </Button>
+          <Button
+            className="rounded-full"
             onClick={() => setConsent('dismissed')}
             type="button"
+            variant="secondary"
           >
             Dismiss
-          </button>
+          </Button>
         </div>
       </div>
     </div>

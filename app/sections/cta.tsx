@@ -1,4 +1,7 @@
+import { cn } from '@voluspalabs/lib/utils/cn'
+import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
+import { TYPO } from '../typography'
 
 export default function CTABanner() {
   return (
@@ -15,22 +18,18 @@ export default function CTABanner() {
 
       <div className="wrapper py-24">
         <div className="relative ml-auto max-w-lg rounded-2xl bg-lime-200 p-6 shadow lg:mr-8">
-          <h2 className="font-semibold text-2xl" id="cta-heading">
+          <h2 className={cn(TYPO.cardTitle)} id="cta-heading">
             Make a Difference: Embrace Solutions, Fight Against Pollution
           </h2>
-          <p className="mt-2 text-foreground/80">
+          <p className={cn('mt-2 text-foreground/80', TYPO.body)}>
             Partner with us on resilient, practical initiatives that move
             communities toward a cleaner energy future.
           </p>
-          <a
-            className="mt-4 inline-flex items-center rounded-full bg-foreground px-4 py-2 font-medium text-background text-sm shadow hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            href="#contact"
-          >
-            Work with us
-          </a>
+          <Button asChild className="mt-4 rounded-full" size="sm">
+            <a href="#contact">Work with us</a>
+          </Button>
         </div>
       </div>
     </section>
   )
 }
-

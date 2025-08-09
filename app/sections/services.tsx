@@ -1,3 +1,4 @@
+import { TYPO } from '../typography'
 import { SERVICES } from './content'
 
 const toneToClass: Record<(typeof SERVICES)[number]['tone'], string> = {
@@ -14,7 +15,7 @@ export default function ServicesGrid() {
       className="wrapper py-16 sm:py-24"
       id="services"
     >
-      <h2 className="font-semibold text-3xl sm:text-4xl" id="services-heading">
+      <h2 className={TYPO.h2} id="services-heading">
         We partner to fast‑track a sustainable future
       </h2>
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -25,7 +26,7 @@ export default function ServicesGrid() {
             key={s.id}
           >
             <div className="flex items-start justify-between">
-              <h3 className="font-semibold text-xl">{s.title}</h3>
+              <h3 className={TYPO.cardTitle}>{s.title}</h3>
               <span
                 aria-hidden
                 className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/70 text-foreground transition-transform group-hover:translate-x-1 group-focus-visible:translate-x-1"
@@ -33,8 +34,10 @@ export default function ServicesGrid() {
                 →
               </span>
             </div>
-            <p className="mt-2 text-sm/6 opacity-80">{s.blurb}</p>
-            <span className="mt-4 inline-flex items-center gap-1 font-medium text-sm underline underline-offset-4">
+            <p className={`mt-2 opacity-80 ${TYPO.small}/6`}>{s.blurb}</p>
+            <span
+              className={`mt-4 inline-flex items-center gap-1 font-medium underline underline-offset-4 ${TYPO.small}`}
+            >
               Learn more
             </span>
           </a>
@@ -43,4 +46,3 @@ export default function ServicesGrid() {
     </section>
   )
 }
-

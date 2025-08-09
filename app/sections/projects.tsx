@@ -1,4 +1,6 @@
+import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
+import { TYPO } from '../typography'
 import { PROJECTS } from './content'
 
 export default function FeaturedProjects() {
@@ -8,7 +10,7 @@ export default function FeaturedProjects() {
       className="wrapper py-16 sm:py-24"
       id="projects"
     >
-      <h2 className="font-semibold text-3xl sm:text-4xl" id="projects-heading">
+      <h2 className={TYPO.h2} id="projects-heading">
         Featured Projects
       </h2>
       <div className="mt-8 space-y-10">
@@ -18,12 +20,14 @@ export default function FeaturedProjects() {
             key={p.id}
           >
             <div className="order-2 lg:order-1">
-              <div className="text-foreground/60 text-xs uppercase tracking-wide">
+              <div className={`text-foreground/60 ${TYPO.micro}`}>
                 Project {p.number}
               </div>
-              <h3 className="mt-1 font-semibold text-2xl">{p.title}</h3>
-              <p className="mt-3 text-foreground/80">{p.description}</p>
-              <dl className="mt-4 grid grid-cols-3 gap-2 text-sm">
+              <h3 className={`mt-1 ${TYPO.h3}`}>{p.title}</h3>
+              <p className={`mt-3 text-foreground/80 ${TYPO.body}`}>
+                {p.description}
+              </p>
+              <dl className={`mt-4 grid grid-cols-3 gap-2 ${TYPO.small}`}>
                 {p.meta.map((m) => (
                   <div className="rounded-lg bg-muted px-3 py-2" key={m.label}>
                     <dt className="text-foreground/60">{m.label}</dt>
@@ -32,12 +36,14 @@ export default function FeaturedProjects() {
                 ))}
               </dl>
               <div className="mt-4">
-                <button
-                  className="rounded-full border border-foreground/10 px-4 py-2 font-medium text-sm hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                <Button
+                  className="rounded-full"
+                  size="sm"
                   type="button"
+                  variant="secondary"
                 >
                   View details
-                </button>
+                </Button>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -57,4 +63,3 @@ export default function FeaturedProjects() {
     </section>
   )
 }
-

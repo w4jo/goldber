@@ -1,6 +1,10 @@
 'use client'
 
+import { Button } from '@voluspalabs/ui/button'
+import { Input } from '@voluspalabs/ui/input'
+import { Textarea } from '@voluspalabs/ui/textarea'
 import * as React from 'react'
+import { TYPO } from '../typography'
 
 interface FormState {
   readonly fullName: string
@@ -55,10 +59,10 @@ export default function ContactForm() {
       className="wrapper py-16 sm:py-24"
       id="contact"
     >
-      <h2 className="font-semibold text-3xl sm:text-4xl" id="contact-heading">
+      <h2 className={TYPO.h2} id="contact-heading">
         Contact us
       </h2>
-      <p className="mt-2 max-w-2xl text-foreground/80">
+      <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
         Tell us about your enquiry and timeline. We typically reply within two
         business days.
       </p>
@@ -69,12 +73,11 @@ export default function ContactForm() {
         ref={formRef}
       >
         <div className="md:col-span-1">
-          <label className="font-medium text-sm" htmlFor="fullName">
+          <label className={`font-medium ${TYPO.small}`} htmlFor="fullName">
             Full name
           </label>
-          <input
+          <Input
             autoComplete="name"
-            className="mt-1 w-full rounded-lg border px-3 py-2 outline-none focus-visible:ring-2 focus-visible:ring-primary"
             id="fullName"
             name="fullName"
             placeholder="Full name"
@@ -82,23 +85,17 @@ export default function ContactForm() {
           />
         </div>
         <div className="md:col-span-1">
-          <label className="font-medium text-sm" htmlFor="company">
+          <label className={`font-medium ${TYPO.small}`} htmlFor="company">
             Company
           </label>
-          <input
-            className="mt-1 w-full rounded-lg border px-3 py-2 outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            id="company"
-            name="company"
-            placeholder="Company"
-          />
+          <Input id="company" name="company" placeholder="Company" />
         </div>
         <div className="md:col-span-1">
-          <label className="font-medium text-sm" htmlFor="email">
+          <label className={`font-medium ${TYPO.small}`} htmlFor="email">
             Work email
           </label>
-          <input
+          <Input
             autoComplete="email"
-            className="mt-1 w-full rounded-lg border px-3 py-2 outline-none focus-visible:ring-2 focus-visible:ring-primary"
             id="email"
             name="email"
             placeholder="Work email"
@@ -107,14 +104,10 @@ export default function ContactForm() {
           />
         </div>
         <div className="md:col-span-1">
-          <label className="font-medium text-sm" htmlFor="enquiry">
+          <label className={`font-medium ${TYPO.small}`} htmlFor="enquiry">
             Type of enquiry
           </label>
-          <select
-            className="mt-1 w-full rounded-lg border bg-background px-3 py-2 outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            id="enquiry"
-            name="enquiry"
-          >
+          <select className={TYPO.small} id="enquiry" name="enquiry">
             {ENQUIRY_OPTIONS.map((opt) => (
               <option key={opt} value={opt}>
                 {opt}
@@ -123,11 +116,10 @@ export default function ContactForm() {
           </select>
         </div>
         <div className="md:col-span-2">
-          <label className="font-medium text-sm" htmlFor="message">
+          <label className={`font-medium ${TYPO.small}`} htmlFor="message">
             Message
           </label>
-          <textarea
-            className="mt-1 w-full rounded-lg border px-3 py-2 outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          <Textarea
             id="message"
             name="message"
             placeholder="Briefly describe your enquiry and timeline"
@@ -136,28 +128,33 @@ export default function ContactForm() {
         </div>
 
         <div className="flex items-center justify-between gap-3 md:col-span-2">
-          <p className="text-foreground/60 text-xs">
+          <p className={`text-foreground/60 ${TYPO.caption}`}>
             We use your information to respond to your enquiry.{' '}
             <a className="underline" href="#contact">
               Cookie settings
             </a>
           </p>
-          <button
-            className="inline-flex items-center rounded-full bg-foreground px-5 py-2.5 font-medium text-background text-sm shadow hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:opacity-50"
+          <Button
+            className="rounded-full"
             disabled={isSubmitting}
+            size="sm"
             type="submit"
           >
             {isSubmitting ? 'Sending…' : 'Send enquiry'}
-          </button>
+          </Button>
         </div>
 
         {status === 'success' && (
-          <output className="rounded-lg bg-emerald-50 p-3 text-emerald-800 text-sm md:col-span-2">
+          <output
+            className={`rounded-lg bg-emerald-50 p-3 text-emerald-800 ${TYPO.small} md:col-span-2`}
+          >
             Your message has been sent.
           </output>
         )}
         {status === 'error' && (
-          <output className="rounded-lg bg-red-50 p-3 text-red-800 text-sm md:col-span-2">
+          <output
+            className={`rounded-lg bg-red-50 p-3 text-red-800 ${TYPO.small} md:col-span-2`}
+          >
             We could not send your message. Please try again later.
           </output>
         )}

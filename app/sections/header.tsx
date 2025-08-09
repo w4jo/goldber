@@ -1,4 +1,7 @@
+import { cn } from '@voluspalabs/lib/utils/cn'
+import { Button } from '@voluspalabs/ui/button'
 import Link from 'next/link'
+import { TYPO } from '../typography'
 import { NAV_ITEMS, ORG } from './content'
 
 export default function Header() {
@@ -7,7 +10,7 @@ export default function Header() {
       <div className="wrapper flex items-start justify-between px-12! py-8">
         <Link
           aria-label={ORG.name}
-          className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-2 font-medium text-foreground text-sm shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50"
+          className={`pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-2 font-medium text-foreground shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 ${TYPO.small}`}
           href="#top"
         >
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -15,7 +18,7 @@ export default function Header() {
         </Link>
 
         <nav className="pointer-events-auto mx-auto hidden rounded-full bg-white/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 md:block">
-          <ul className="flex items-center gap-3 text-sm">
+          <ul className={cn('flex items-center gap-3', TYPO.small)}>
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
@@ -30,15 +33,15 @@ export default function Header() {
         </nav>
 
         <div className="pointer-events-auto hidden md:block">
-          <a
-            className="inline-flex items-center rounded-full bg-foreground px-4 py-2 font-medium text-background text-sm shadow hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            href="#contact"
+          <Button
+            asChild
+            className="rounded-full bg-foreground text-background hover:opacity-90"
+            size="sm"
           >
-            Contact
-          </a>
+            <a href="#contact">Contact</a>
+          </Button>
         </div>
       </div>
     </header>
   )
 }
-

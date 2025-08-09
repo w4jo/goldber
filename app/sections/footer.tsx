@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { TYPO } from '../typography'
 import { LEGAL, NAV_ITEMS, ORG } from './content'
 
 export default function Footer() {
@@ -6,31 +7,33 @@ export default function Footer() {
     <footer className="border-t bg-card py-12">
       <div className="wrapper grid grid-cols-1 gap-8 md:grid-cols-3">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 font-semibold text-sm shadow">
+          <div
+            className={`inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 font-semibold shadow ${TYPO.small}`}
+          >
             <span aria-hidden className="h-2 w-2 rounded-full bg-emerald-600" />
             <span>Goldber</span>
           </div>
-          <p className="mt-3 max-w-sm text-foreground/80 text-sm">
+          <p className={`mt-3 max-w-sm text-foreground/80 ${TYPO.small}`}>
             {ORG.tagline}
           </p>
-          <p className="mt-2 text-foreground/60 text-xs">
+          <p className={`mt-2 text-foreground/60 ${TYPO.caption}`}>
             {LEGAL.investmentDisclaimer}
           </p>
         </div>
 
         <nav aria-label="Footer navigation">
-          <ul className="grid grid-cols-2 gap-2 text-sm">
+          <ul className={`grid grid-cols-2 gap-2 ${TYPO.small}`}>
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
-                <a className="hover:underline" href={`#${item.id}`}>
+                <Link className="hover:underline" href={`#${item.id}`}>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
-        <div className="text-sm">
+        <div className={TYPO.small}>
           <div>
             <span className="font-medium">Contact</span>
             <div className="mt-1 text-foreground/80">
@@ -43,7 +46,7 @@ export default function Footer() {
               <div>{ORG.phone}</div>
             </div>
           </div>
-          <div className="mt-4 text-foreground/60 text-xs">
+          <div className={`mt-4 text-foreground/60 ${TYPO.caption}`}>
             © {new Date().getFullYear()} {ORG.name}
           </div>
         </div>
@@ -51,4 +54,3 @@ export default function Footer() {
     </footer>
   )
 }
-

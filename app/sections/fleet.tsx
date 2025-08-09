@@ -1,4 +1,6 @@
+import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
+import { TYPO } from '../typography'
 import { FLEET } from './content'
 
 export default function FleetCarousel() {
@@ -8,7 +10,7 @@ export default function FleetCarousel() {
       className="wrapper py-16 sm:py-24"
       id="fleet"
     >
-      <h2 className="font-semibold text-3xl sm:text-4xl" id="fleet-heading">
+      <h2 className={TYPO.h2} id="fleet-heading">
         Luxury Fleet
       </h2>
       <div className="no-scrollbar mt-6 overflow-x-auto">
@@ -28,14 +30,18 @@ export default function FleetCarousel() {
                 />
               </div>
               <div className="p-2">
-                <h3 className="font-semibold text-lg">{car.model}</h3>
-                <p className="text-foreground/70 text-sm">{car.specs}</p>
-                <a
-                  className="mt-3 inline-flex rounded-full border border-foreground/10 px-3 py-1.5 font-medium text-sm hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  href="#contact"
+                <h3 className={TYPO.titleSm}>{car.model}</h3>
+                <p className={`text-foreground/70 ${TYPO.small}`}>
+                  {car.specs}
+                </p>
+                <Button
+                  asChild
+                  className="mt-3 rounded-full"
+                  size="sm"
+                  variant="secondary"
                 >
-                  Enquire about rental
-                </a>
+                  <a href="#contact">Enquire about rental</a>
+                </Button>
               </div>
             </article>
           ))}
@@ -44,4 +50,3 @@ export default function FleetCarousel() {
     </section>
   )
 }
-

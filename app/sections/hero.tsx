@@ -1,4 +1,7 @@
+import { cn } from '@voluspalabs/lib/utils/cn'
+import { Button } from '@voluspalabs/ui/button'
 import Image from 'next/image'
+import { TYPO } from '../typography'
 import { METRICS } from './content'
 
 export default function Hero() {
@@ -29,28 +32,35 @@ export default function Hero() {
           <div className="relative px-6 py-10 sm:px-10 sm:py-14 lg:py-20">
             <div className="max-w-2xl">
               <h1
-                className="animate-fade-in font-semibold text-4xl text-white tracking-tight sm:text-6xl"
+                className={cn('animate-fade-in text-white', TYPO.h1)}
                 id="hero-heading"
               >
                 We invest where life and work meet
               </h1>
-              <p className="mt-4 max-w-xl animate-fade-in text-base text-white/90">
+              <p
+                className={cn(
+                  'mt-4 max-w-xl animate-fade-in text-white/90',
+                  TYPO.body,
+                )}
+              >
                 Selective opportunities across European real estate and green
                 energy. Built for durability, designed for long-term value.
               </p>
               <div className="mt-8 flex gap-3">
-                <a
-                  className="inline-flex items-center rounded-full bg-white px-5 py-2.5 font-medium text-foreground text-sm shadow hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  href="#services"
+                <Button
+                  asChild
+                  className="rounded-full bg-white text-foreground hover:bg-white/90"
+                  size="sm"
                 >
-                  Explore opportunities
-                </a>
-                <a
-                  className="inline-flex items-center rounded-full bg-foreground/90 px-5 py-2.5 font-medium text-sm text-white shadow hover:bg-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  href="#contact"
+                  <a href="#services">Explore opportunities</a>
+                </Button>
+                <Button
+                  asChild
+                  className="rounded-full bg-foreground/90 text-white hover:bg-foreground"
+                  size="sm"
                 >
-                  Contact us
-                </a>
+                  <a href="#contact">Contact us</a>
+                </Button>
               </div>
             </div>
           </div>
@@ -65,10 +75,10 @@ export default function Hero() {
                   key={m.label}
                 >
                   <div>
-                    <div className="font-semibold text-2xl text-emerald-900 sm:text-3xl">
+                    <div className={cn('text-emerald-900', TYPO.stat)}>
                       {m.value}
                     </div>
-                    <div className="text-foreground/60 text-xs uppercase tracking-wide">
+                    <div className={cn('text-foreground/60', TYPO.micro)}>
                       {m.label}
                     </div>
                   </div>
