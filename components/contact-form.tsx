@@ -19,13 +19,21 @@ interface FormState {
   readonly company: string
   readonly email: string
   readonly message: string
-  readonly enquiry: 'Investment' | 'Partnership' | 'Fleet Rental' | 'Other'
+  readonly enquiry:
+    | 'Real Estate'
+    | 'Green Energy'
+    | 'Finance & Trading'
+    | 'Luxury Cars'
+    | 'Partnership'
+    | 'Other'
 }
 
 const ENQUIRY_OPTIONS: readonly FormState['enquiry'][] = [
-  'Investment',
+  'Real Estate',
+  'Green Energy',
+  'Finance & Trading',
+  'Luxury Cars',
   'Partnership',
-  'Fleet Rental',
   'Other',
 ]
 
@@ -130,8 +138,8 @@ export default function ContactForm() {
               Contact us
             </h2>
             <p className={cn('mt-2 max-w-xl text-foreground/80', TYPO.body)}>
-              Tell us about your enquiry and timeline. We typically reply within
-              two business days.
+              Odaberite tip upita i kratko nam recite kako možemo da pomognemo.
+              Na poruke najčešće odgovaramo u roku od dva radna dana.
             </p>
           </div>
 
@@ -167,7 +175,7 @@ export default function ContactForm() {
               }
               aria-invalid={touched.fullName && Boolean(errors.fullName)}
               autoComplete="name"
-              className="bg-white"
+              className="bg-card"
               id="fullName"
               name="fullName"
               onBlur={() => setTouched((t) => ({ ...t, fullName: true }))}
@@ -192,7 +200,7 @@ export default function ContactForm() {
               Company
             </label>
             <Input
-              className="bg-white"
+              className="bg-card"
               id="company"
               name="company"
               onChange={(e) =>
@@ -212,7 +220,7 @@ export default function ContactForm() {
               }
               aria-invalid={touched.email && Boolean(errors.email)}
               autoComplete="email"
-              className="bg-white"
+              className="bg-card"
               id="email"
               name="email"
               onBlur={() => setTouched((t) => ({ ...t, email: true }))}
@@ -286,10 +294,7 @@ export default function ContactForm() {
 
           <div className="flex items-center justify-between gap-3 md:col-span-2">
             <p className={cn('text-foreground/60', TYPO.caption)}>
-              We use your information to respond to your enquiry.{' '}
-              <a className="underline" href="#contact">
-                Cookie settings
-              </a>
+              We use your information to respond to your enquiry.
             </p>
             <Button
               className="rounded-full bg-primary text-primary-foreground hover:opacity-90"

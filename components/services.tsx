@@ -3,23 +3,20 @@ import { TYPO } from '@/components/typography'
 import { SERVICES } from './content'
 
 const toneToClass: Record<(typeof SERVICES)[number]['tone'], string> = {
-  mint: 'bg-[var(--brand-bg-soft)] text-background/95',
-  lime: 'bg-[var(--brand-lime)]',
-  coral: 'bg-[var(--brand-coral)] ',
-  charcoal: 'bg-[var(--brand-charcoal)] text-white',
+  mint: 'bg-secondary/60',
+  lime: 'bg-primary/30',
+  coral: 'bg-primary/40',
+  charcoal: 'bg-secondary text-foreground',
 }
 
 export default function ServicesGrid() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="wrapper animate-scale-in rounded-3xl bg-white py-12 motion-reduce:animate-none sm:py-10"
+      className="wrapper animate-scale-in rounded-3xl motion-reduce:animate-none"
       id="services"
     >
-      <h2 className={TYPO.h2} id="services-heading">
-        We partner to fast‑track a sustainable future
-      </h2>
-      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {SERVICES.map((s, idx) => (
           <a
             className={cn(
@@ -34,7 +31,7 @@ export default function ServicesGrid() {
               <h3 className={TYPO.cardTitle}>{s.title}</h3>
               <span
                 aria-hidden
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/70 text-foreground transition-transform group-hover:translate-x-1 group-focus-visible:translate-x-1"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-secondary/60 text-foreground transition-transform group-hover:translate-x-1 group-focus-visible:translate-x-1"
               >
                 →
               </span>

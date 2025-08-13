@@ -9,27 +9,28 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(98% 1% 235deg);
-  --foreground: oklch(0.23 0.015 250);
+  /* Luxury corporate palette inspired by gold-on-black branding */
+  --background: #07080a;
+  --foreground: oklch(0.96 0.01 95);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.23 0.015 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.23 0.015 250);
-  --primary: oklch(0.56 0.09 186);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0.01 230);
-  --secondary-foreground: oklch(0.23 0.015 250);
-  --muted: oklch(0.94 0.02 230);
-  --muted-foreground: oklch(0.54 0.01 240);
-  --accent: oklch(0.96 0.02 230);
-  --accent-foreground: oklch(0.23 0.015 250);
-  --destructive: oklch(0.75 0.17 40);
+  --card: oklch(0.16 0.006 250);
+  --card-foreground: oklch(0.96 0.01 95);
+  --popover: oklch(0.16 0.006 250);
+  --popover-foreground: oklch(0.96 0.01 95);
+  --primary: oklch(0.75 0.14 80);
+  --primary-foreground: oklch(0.17 0.01 260);
+  --secondary: oklch(0.2 0.006 250);
+  --secondary-foreground: oklch(0.96 0.01 95);
+  --muted: oklch(0.22 0.006 250);
+  --muted-foreground: oklch(0.8 0.02 95);
+  --accent: oklch(0.24 0.008 250);
+  --accent-foreground: oklch(0.96 0.01 95);
+  --destructive: oklch(0.58 0.17 40);
   --destructive-foreground: oklch(0.15 0 0);
 
-  --border: oklch(0.92 0.015 230);
-  --input: oklch(0.92 0.015 230);
-  --ring: oklch(0.86 0.02 230);
+  --border: oklch(0.28 0.006 250);
+  --input: oklch(0.28 0.006 250);
+  --ring: oklch(0.75 0.14 80);
 
   --radius: 1.083rem;
 
@@ -51,12 +52,15 @@
   --switch: oklch(0.76 0.19 147);
   --switch-dot: oklch(1 0 0);
 
-  /* Brand tokens used in components (services, cta, etc.) */
-  --brand-charcoal: oklch(0.29 0.03 70);
-  --brand-coral: oklch(0.79 0.16 40);
-  --brand-teal: oklch(74% 41% 38deg);
-  --brand-lime: oklch(93% 34% 127deg);
-  --brand-bg-soft: oklch(46% 17% 194deg);
+  /* Brand tokens tuned to gold & graphite */
+  --brand-charcoal: oklch(0.16 0.01 250);
+  --brand-coral: oklch(0.68 0.16 80);
+  --brand-teal: oklch(0.52 0.06 180);
+  --brand-lime: oklch(0.78 0.12 80);
+  --brand-bg-soft: oklch(0.93 0.02 95);
+
+  /* Surfaces */
+  --footer: #050608;
 
   --shadow-sm: 0px 1px 0.5px 0.05000000074505806px #18181b0d;
   --shadow-md:
@@ -102,8 +106,10 @@
     0 0 #0000, 0 0 #0000,
     0px 1px 0px 0px hsla(0, 0%, 100%, 0.03) inset,
     0px 0px 0px 1px hsla(0, 0%, 100%, 0.03) inset,
-    0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.1),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.1), 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
+    0px 0px 0px 1px rgba(255, 255, 255, 0.06),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.35),
+    0px 4px 8px 0px rgba(0, 0, 0, 0.35),
+    0px 10px 18px 0px rgba(0, 0, 0, 0.3);
 
   --shadow-ring: 0 0 #0000;
   --dialog-shadow:

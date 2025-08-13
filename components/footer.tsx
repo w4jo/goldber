@@ -1,4 +1,5 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
+import Image from 'next/image'
 import { TYPO } from '@/components/typography'
 import { LEGAL, NAV_ITEMS, ORG } from './content'
 
@@ -12,16 +13,16 @@ export default function Footer() {
   return (
     <footer className="animate-scale-in py-4 pt-0 motion-reduce:animate-none sm:py-8">
       <div className="wrapper">
-        <div className="grid animate-slide-up-sm grid-cols-1 gap-8 rounded-2xl border bg-card/80 p-6 shadow-card motion-reduce:animate-none md:grid-cols-3 lg:p-8">
+        <div className="grid animate-slide-up-sm grid-cols-1 gap-8 rounded-2xl border bg-[color:var(--footer)] p-6 shadow-card motion-reduce:animate-none md:grid-cols-3 lg:p-8">
           <div>
-            <div
-              className={cn(
-                'inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 font-semibold shadow',
-                TYPO.small,
-              )}
-            >
-              <span aria-hidden className="h-2 w-2 rounded-full bg-primary" />
-              <span>Goldber</span>
+            <div className="inline-flex items-center gap-2">
+              <Image
+                alt="Goldberg Real Estate logo"
+                className="h-8 w-auto rounded-sm"
+                height={32}
+                src="/logo.png"
+                width={112}
+              />
             </div>
             <p className={cn('mt-3 max-w-sm text-foreground/80', TYPO.small)}>
               {ORG.tagline}

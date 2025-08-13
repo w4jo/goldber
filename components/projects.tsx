@@ -10,7 +10,7 @@ export default function FeaturedProjects() {
       id="projects"
     >
       <h2 className={TYPO.h2} id="projects-heading">
-        Featured Projects
+        Real Estate Projects
       </h2>
       <div className="mt-8 space-y-10">
         {PROJECTS.map((p, idx) => (

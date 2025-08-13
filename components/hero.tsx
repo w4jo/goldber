@@ -15,14 +15,14 @@ export default function Hero() {
         {/* Hero card */}
         <div className="relative animate-scale-in overflow-hidden rounded-b-[1.25rem] border bg-card/40 shadow-xl motion-reduce:animate-none md:rounded-[1.25rem]">
           <Image
-            alt="Green landscape background"
+            alt="Gold and graphite abstract background"
             className="object-cover"
             fetchPriority="high"
             fill
             placeholder="empty"
             priority
             sizes="100vw"
-            src="/images/wind-turbines-1.avif"
+            src="/file.svg"
           />
           {/* Readability gradient */}
           <div
@@ -35,32 +35,32 @@ export default function Hero() {
             <div className="max-w-2xl">
               <h1
                 className={cn(
-                  'animate-fade-in text-balance text-white',
+                  'animate-fade-in text-balance text-primary',
                   TYPO.h1,
                 )}
                 id="hero-heading"
               >
-                We invest where life and work meet
+                Goldberg Real Estate
               </h1>
               <p
                 className={cn(
-                  'mt-4 max-w-xl animate-fade-in text-balance text-white/90',
+                  'mt-4 max-w-xl animate-fade-in text-balance text-primary/90',
                   TYPO.body,
                 )}
               >
-                Selective opportunities across European real estate and green
-                energy. Built for durability, designed for long-term value.
+                Real assets, clean energy and disciplined finance. Corporate,
+                modern and built for long‑term value.
               </p>
               <div className="mt-8 flex animate-delay-300 animate-scale-in gap-3 motion-reduce:animate-none">
                 <Button
                   asChild
-                  className="rounded-full bg-white text-foreground hover:bg-white/90"
+                  className="rounded-full bg-primary text-primary-foreground hover:opacity-90"
                 >
                   <a href="#services">Explore opportunities</a>
                 </Button>
                 <Button
                   asChild
-                  className="rounded-full bg-primary text-primary-foreground hover:opacity-90"
+                  className="rounded-full bg-secondary text-secondary-foreground hover:opacity-90"
                 >
                   <a href="#contact">Contact us</a>
                 </Button>
@@ -71,11 +71,11 @@ export default function Hero() {
         {/* Stats strip: static on mobile, floating on md+ */}
         <div className="px-6 pb-4 sm:px-10 md:px-0">
           <div className="-mt-28 md:pointer-events-none md:inset-x-8 md:bottom-4 md:mx-auto md:max-w-4xl md:translate-y-1/3">
-            <div className="pointer-events-auto mx-auto grid grid-cols-1 gap-4 rounded-2xl bg-white/85 p-4 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/70 sm:grid-cols-3">
+            <div className="pointer-events-auto mx-auto grid grid-cols-1 gap-4 rounded-2xl bg-secondary/80 p-4 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-secondary/60 sm:grid-cols-3">
               {METRICS.map((m, idx) => (
                 <div
                   className={cn(
-                    'flex animate-scale-in items-center justify-between rounded-xl bg-white p-4 shadow-sm motion-reduce:animate-none',
+                    'flex animate-scale-in items-center justify-between rounded-xl bg-card p-4 shadow-sm motion-reduce:animate-none',
                     idx === 0
                       ? 'animate-delay-100'
                       : idx === 1

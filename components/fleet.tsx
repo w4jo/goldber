@@ -11,8 +11,12 @@ export default function FleetCarousel() {
       id="fleet"
     >
       <h2 className={TYPO.h2} id="fleet-heading">
-        Luxury Fleet
+        Luxury Cars
       </h2>
+      <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
+        Prodaja i rentiranje luksuznih automobila. Za dostupnost i rezervacije
+        koristite kontakt formu ispod — naš tim će se javiti u najkraćem roku.
+      </p>
       <div className="no-scrollbar mt-6 overflow-x-auto">
         <div className="flex min-w-max gap-4">
           {FLEET.map((car, idx) => (

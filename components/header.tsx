@@ -8,6 +8,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@voluspalabs/ui/drawer'
+import Image from 'next/image'
 import { TYPO } from '@/components/typography'
 import { NAV_ITEMS, ORG } from './content'
 
@@ -16,21 +17,23 @@ export default function Header() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-40">
       <div
         aria-hidden="true"
-        className="mask-[linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.88)_75%,transparent_100%)] pointer-events-none absolute top-0 z-0 h-20 w-full animate-fade-in bg-[linear-gradient(180deg,rgba(221,226,238,0.40)_0%,rgba(221,226,238,0.00)_100%)] backdrop-blur-2xl motion-reduce:animate-none"
+        className="mask-[linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.88)_75%,transparent_100%)] pointer-events-none absolute top-0 z-0 h-20 w-full animate-fade-in bg-[linear-gradient(180deg,#07080a_0%,rgba(7,8,10,0)_100%)] backdrop-blur-2xl motion-reduce:animate-none"
       />
       <div className="wrapper z-10 flex animate-scale-in items-center justify-between px-4! py-2 motion-reduce:animate-none md:px-6!">
-        <a
-          aria-label={ORG.name}
-          className={`pointer-events-auto inline-flex animate-scale-in items-center gap-2 rounded-full bg-white px-3 py-2 font-medium text-foreground shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 motion-reduce:animate-none ${TYPO.small}`}
-          href="#top"
-        >
-          <span className="size-2 rounded-full bg-primary" />
-          <span>Goldber</span>
+        <a aria-label={ORG.name} className="pointer-events-auto" href="#top">
+          <Image
+            alt="Goldberg Real Estate logo"
+            className="h-8 w-auto"
+            height={32}
+            priority
+            src="/logo.png"
+            width={112}
+          />
         </a>
 
         <nav
           aria-label="Primary"
-          className="pointer-events-auto z-10 mx-auto hidden rounded-full bg-white/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/50 motion-reduce:animate-none md:block md:animate-scale-in"
+          className="pointer-events-auto z-10 mx-auto hidden rounded-full bg-secondary/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-secondary/50 motion-reduce:animate-none md:block md:animate-scale-in"
         >
           <ul className={cn('flex items-center gap-3', TYPO.small)}>
             {NAV_ITEMS.map((item) => (
@@ -58,7 +61,7 @@ export default function Header() {
             <DrawerTrigger asChild>
               <Button
                 aria-label="Open menu"
-                className="rounded-full bg-white/80 text-foreground hover:bg-white"
+                className="rounded-full bg-secondary text-secondary-foreground hover:opacity-90"
                 size="sm"
                 type="button"
                 variant="secondary"
