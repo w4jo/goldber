@@ -16,18 +16,18 @@ export default function Hero() {
         <div className="relative animate-scale-in overflow-hidden rounded-b-[1.25rem] border bg-card/40 shadow-xl motion-reduce:animate-none md:rounded-[1.25rem]">
           <Image
             alt="Gold and graphite abstract background"
-            className="object-cover"
+            className="object-cover object-left-top md:object-top"
             fetchPriority="high"
             fill
             placeholder="empty"
             priority
             sizes="100vw"
-            src="/file.svg"
+            src="/images/skyscraper.jpg"
           />
           {/* Readability gradient */}
           <div
             aria-hidden
-            className="absolute inset-0 animate-delay-100 animate-fade-in bg-gradient-to-tr from-black/80 via-black/40 to-transparent motion-reduce:animate-none"
+            className="absolute inset-0 animate-delay-100 animate-fade-in bg-gradient-to-tr from-black via-black/60 to-transparent motion-reduce:animate-none"
           />
 
           {/* Content */}
@@ -40,12 +40,13 @@ export default function Hero() {
                 )}
                 id="hero-heading"
               >
-                Goldberg Real Estate — Real Assets, Clean Energy, Finance
+                We invest where life and work meet
               </h1>
               <p
                 className={cn(
                   'mt-4 max-w-xl animate-fade-in text-balance text-primary/90',
-                  TYPO.body,
+                  TYPO.titleSm,
+                  'font-medium',
                 )}
               >
                 We invest in European real estate, renewable energy and select

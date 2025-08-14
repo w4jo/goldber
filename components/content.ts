@@ -81,33 +81,33 @@ export const SERVICES: readonly {
 }[] = [
   {
     id: 'real-estate',
-    title: 'Real Estate',
+    title: 'Shaping Skylines',
     blurb:
-      'Income-focused residential and light industrial assets in resilient European locations. Active asset management and selective co-investments.',
+      'Developing iconic properties and creating value through strategic real estate investments.',
     href: '#contact',
     tone: 'mint',
   },
   {
     id: 'wind-parks',
-    title: 'Wind Parks',
+    title: 'Powering the Future',
     blurb:
-      'Partnering on onshore wind with strong resource profiles and grid accessibility. Structured to create a stable, long-term revenue layer.',
+      'Investing in sustainable energy sources to build a cleaner, more profitable tomorrow.',
     href: '#contact',
     tone: 'lime',
   },
   {
     id: 'batteries',
-    title: 'Batteries',
+    title: 'Navigating Opportunity',
     blurb:
-      'Storage to enhance grid reliability and monetize volatility across energy markets. Paired with renewables for balanced returns.',
+      'Expert financial management and commodity trading for robust portfolio growth.',
     href: '#contact',
     tone: 'coral',
   },
   {
     id: 'solar',
-    title: 'Solar Energy',
+    title: 'Driving Excellence',
     blurb:
-      'Rooftop and ground-mount PV portfolios with long-term PPAs. Scalable deployment to fast-track a sustainable future.',
+      "Curating and providing access to the world's most prestigious vehicles.",
     href: '#contact',
     tone: 'charcoal',
   },
