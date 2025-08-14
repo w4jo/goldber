@@ -26,14 +26,14 @@ export default function CTABanner() {
             className={cn('text-foreground', TYPO.cardTitle)}
             id="cta-heading"
           >
-            Build with Confidence
+            Ready to Build Your Future?
           </h2>
           <p className={cn('mt-2 text-foreground/80', TYPO.body)}>
-            Partner with a team focused on real assets, clean energy and
-            disciplined finance.
+            Join Goldberg in pioneering new opportunities and creating lasting
+            value. Let's start the conversation about your next venture.
           </p>
           <Button asChild className="mt-4" size="sm">
-            <a href="#contact">Work with us</a>
+            <a href="#contact">Let's Get Started</a>
           </Button>
         </div>
       </div>

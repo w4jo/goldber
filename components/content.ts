@@ -7,11 +7,14 @@ export const ORG = {
   address: 'Prague, Czech Republic',
 } as const
 
+// Order reflects section order in app/page.tsx
 export const NAV_ITEMS = [
-  { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
-  { id: 'fleet', label: 'Fleet' },
-  { id: 'faq', label: 'FAQ' },
+  { id: 'services', label: 'Services' },
+  { id: 'real-estate', label: 'Real Estate' },
+  { id: 'green-energy', label: 'Green Energy' },
+  { id: 'finance', label: 'Finance' },
+  { id: 'fleet', label: 'Cars' },
   { id: 'contact', label: 'Contact' },
 ] as const
 
@@ -84,7 +87,7 @@ export const PROJECTS: readonly ProjectItem[] = [
     number: 4,
     title: 'Pula Croatia',
     description:
-      'Limited‑run performance vehicles curated for resilience and value retention. Focused on provenance, condition, and long‑term collectability within a balanced portfolio.',
+      'An ambitious coastal development in Pula, Croatia, poised to become a premier destination for luxury tourism and residential living on the Adriatic.',
     meta: [
       { label: 'Location', value: 'Pula, Croatia' },
       { label: 'Date', value: 'Coming Soon' },

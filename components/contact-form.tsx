@@ -135,11 +135,12 @@ export default function ContactForm() {
         <div className="flex h-full animate-delay-100 animate-slide-up-sm flex-col justify-between motion-reduce:animate-none">
           <div>
             <h2 className={TYPO.h2} id="contact-heading">
-              Contact us
+              Connect With Us
             </h2>
             <p className={cn('mt-2 max-w-xl text-foreground/80', TYPO.body)}>
-              Choose your enquiry type and share a few details. We typically
-              respond within two business days.
+              Whether you're an investor, potential partner, or client, we're
+              ready to discuss how we can achieve great things together. Reach
+              out to start the conversation.
             </p>
           </div>
 

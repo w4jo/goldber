@@ -15,14 +15,20 @@ export default function SectionRealEstate() {
             Real Estate Development & Investment
           </h2>
           <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
-            We develop and invest in places where life and work meet. Our focus
-            spans mixed‑use and residential assets with resilient fundamentals
-            and long‑term value creation through active asset management.
+            We transform landscapes and communities by developing high-quality
+            residential and commercial properties. Our vision is to create
+            spaces that are not only profitable investments but also landmarks
+            of design and functionality.
           </p>
           <ul className={`mt-4 grid list-disc gap-2 pl-5 ${TYPO.small}`}>
-            <li>Ground‑up mixed‑use and residential developments</li>
-            <li>Select acquisitions and active asset management</li>
-            <li>Co‑investments with trusted partners</li>
+            <li>Building the future of urban living and business.</li>
+            <li>
+              From land acquisition and planning to construction and sales.
+            </li>
+            <li>
+              A proven track record of delivering superior returns for our
+              partners.
+            </li>
           </ul>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <Button asChild className="rounded-full" variant="secondary">

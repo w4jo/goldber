@@ -12,24 +12,34 @@ export default function SectionGreenEnergy() {
       <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <h2 className={TYPO.h2} id="green-energy-heading">
-            Green Energy
+            Investing in a Sustainable Future
           </h2>
           <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
-            Ulažemo u proizvodne kapacitete iz obnovljivih izvora — solar, hidro
-            i vetar — sa fokusom na dugoročne ugovore, stabilne prihode i
-            sistemska poboljšanja.
+            We are committed to driving the transition to clean energy. By
+            investing in solar, wind, and hydro power, we generate not only
+            clean electricity but also sustainable, long-term financial returns.
+            It's an investment in our planet and our portfolio.
           </p>
           <ul className={`mt-4 grid list-disc gap-2 pl-5 ${TYPO.small}`}>
-            <li>Rooftop i ground‑mount solar portfolia</li>
-            <li>Onshore vetro parkovi sa pristupom mreži</li>
-            <li>Finansijska i operativna struktura za stabilne povrate</li>
+            <li>
+              Strategic investments across solar, wind, and hydroelectric
+              projects.
+            </li>
+            <li>
+              Managing the full lifecycle from production to selling on the open
+              market.
+            </li>
+            <li>
+              Capitalizing on the rapidly expanding global demand for green
+              energy.
+            </li>
           </ul>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <Button asChild className="rounded-full" variant="secondary">
-              <a href="#contact">Predložite lokaciju</a>
+              <a href="#contact">Explore Partnerships</a>
             </Button>
             <Button asChild className="rounded-full">
-              <a href="#contact">Partnerstva i PPA</a>
+              <a href="#contact">Our Energy Strategy</a>
             </Button>
           </div>
         </div>

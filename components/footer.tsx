@@ -31,14 +31,6 @@ export default function Footer() {
             <p className={cn('mt-3 max-w-sm text-foreground/80', TYPO.small)}>
               {ORG.tagline}
             </p>
-            <div className="mt-4 grid gap-2 text-foreground/80">
-              <a className={cn('underline', TYPO.small)} href="#projects">
-                Explore projects →
-              </a>
-              <a className={cn('underline', TYPO.small)} href="#contact">
-                Work with us →
-              </a>
-            </div>
           </div>
 
           <nav aria-label="Footer navigation">

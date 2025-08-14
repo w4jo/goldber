@@ -11,11 +11,13 @@ export default function FleetCarousel() {
       id="fleet"
     >
       <h2 className={TYPO.h2} id="fleet-heading">
-        Luxury Cars
+        The Pinnacle of Automotive
       </h2>
       <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
-        Sales and rental of luxury vehicles. For availability and reservations,
-        use the contact form below — our team will reply promptly.
+        Experience the ultimate in performance and luxury. Our automotive
+        division offers an exclusive selection of the world's most sought-after
+        vehicles for sale and rental. We provide more than a car; we provide an
+        unparalleled driving experience.
       </p>
       <div className="no-scrollbar mt-8 overflow-x-auto">
         <div className="flex min-w-max gap-6">
