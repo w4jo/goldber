@@ -11,9 +11,13 @@ const LINK_ARROW_CLASS =
 
 export default function Footer() {
   return (
-    <footer className="animate-scale-in py-4 pt-0 motion-reduce:animate-none sm:py-8">
+    <footer className="animate-scale-in py-6 pt-0 motion-reduce:animate-none sm:py-10">
       <div className="wrapper">
-        <div className="grid animate-slide-up-sm grid-cols-1 gap-8 rounded-2xl border bg-[color:var(--footer)] p-6 shadow-card motion-reduce:animate-none md:grid-cols-3 lg:p-8">
+        <div className="relative grid animate-slide-up-sm grid-cols-1 gap-10 overflow-hidden rounded-3xl border border-white/5 bg-[color:var(--footer)] p-6 shadow-card ring-1 ring-white/10 motion-reduce:animate-none md:grid-cols-3 lg:gap-12 lg:p-10">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.05),rgba(255,255,255,0)_60%)] opacity-70"
+          />
           <div>
             <div className="inline-flex items-center gap-2">
               <Image
@@ -65,6 +69,7 @@ export default function Footer() {
                 <div>{ORG.phone}</div>
               </div>
             </div>
+            <div className="mt-6 h-px w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent" />
             <div className={cn('mt-4 text-foreground/60', TYPO.caption)}>
               © {new Date().getFullYear()} {ORG.name}
             </div>

@@ -18,12 +18,12 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
+        <FeaturedProjects />
         <ServicesGrid />
         <SectionRealEstate />
         <SectionGreenEnergy />
         <SectionFinance />
         <FleetCarousel />
-        <FeaturedProjects />
         <ContactForm />
         <CTABanner />
       </main>

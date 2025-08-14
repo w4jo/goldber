@@ -37,13 +37,13 @@ export default function Header() {
 
         <nav
           aria-label="Primary"
-          className="pointer-events-auto z-10 mx-auto hidden rounded-full bg-secondary/70 px-3 py-1.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-secondary/50 motion-reduce:animate-none md:block md:animate-scale-in"
+          className="pointer-events-auto z-10 mx-auto hidden rounded-full border border-white/10 bg-secondary/60 px-3 py-1.5 shadow-sm ring-1 ring-white/5 backdrop-blur supports-[backdrop-filter]:bg-secondary/40 motion-reduce:animate-none md:block md:animate-scale-in"
         >
           <ul className={cn('flex items-center gap-3', TYPO.small)}>
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
-                  className="inline-flex rounded-full px-3 py-2 text-foreground/80 hover:bg-foreground/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  className="inline-flex rounded-full px-3 py-2 text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   href={`#${item.id}`}
                 >
                   {item.label}
