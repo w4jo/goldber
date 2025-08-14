@@ -14,8 +14,8 @@ export default function FleetCarousel() {
         Luxury Cars
       </h2>
       <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
-        Prodaja i rentiranje luksuznih automobila. Za dostupnost i rezervacije
-        koristite kontakt formu ispod — naš tim će se javiti u najkraćem roku.
+        Sales and rental of luxury vehicles. For availability and reservations,
+        use the contact form below — our team will reply promptly.
       </p>
       <div className="no-scrollbar mt-6 overflow-x-auto">
         <div className="flex min-w-max gap-4">

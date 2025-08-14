@@ -31,7 +31,7 @@ export default function Hero() {
           />
 
           {/* Content */}
-          <div className="relative animate-delay-200 animate-slide-up-sm px-6 pt-30 pb-40 motion-reduce:animate-none">
+          <div className="relative animate-delay-200 animate-slide-up-sm px-6 pt-40 pb-52 motion-reduce:animate-none sm:px-16">
             <div className="max-w-2xl">
               <h1
                 className={cn(
@@ -40,7 +40,7 @@ export default function Hero() {
                 )}
                 id="hero-heading"
               >
-                Goldberg Real Estate
+                Goldberg Real Estate — Real Assets, Clean Energy, Finance
               </h1>
               <p
                 className={cn(
@@ -48,8 +48,9 @@ export default function Hero() {
                   TYPO.body,
                 )}
               >
-                Real assets, clean energy and disciplined finance. Corporate,
-                modern and built for long‑term value.
+                We invest in European real estate, renewable energy and select
+                financial markets. Disciplined, long‑term and designed for
+                durable value.
               </p>
               <div className="mt-8 flex animate-delay-300 animate-scale-in gap-3 motion-reduce:animate-none">
                 <Button
@@ -75,7 +76,7 @@ export default function Hero() {
               {METRICS.map((m, idx) => (
                 <div
                   className={cn(
-                    'flex animate-scale-in items-center justify-between rounded-xl bg-card p-4 shadow-sm motion-reduce:animate-none',
+                    'flex animate-scale-in items-center justify-between rounded-xl border border-border/60 bg-card p-4 shadow-sm motion-reduce:animate-none',
                     idx === 0
                       ? 'animate-delay-100'
                       : idx === 1
@@ -88,7 +89,7 @@ export default function Hero() {
                     <div className={cn('text-primary', TYPO.stat)}>
                       {m.value}
                     </div>
-                    <div className={cn('text-foreground/60', TYPO.micro)}>
+                    <div className={cn('text-foreground/80', TYPO.micro)}>
                       {m.label}
                     </div>
                   </div>

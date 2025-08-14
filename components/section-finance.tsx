@@ -15,22 +15,21 @@ export default function SectionFinance() {
             Finance & Trading
           </h2>
           <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
-            Finansijski menadžment, investiranje u akcije i trgovanje robama
-            (bakar, aluminijum, nikl). Bavimo se i otkupom potraživanja u
-            saradnji sa proverеним partnerima — uz jasne procese upravljanja
-            rizikom.
+            Discreet portfolio management, public markets exposure and physical
+            commodity trading across copper, aluminium and nickel. We also
+            structure and purchase receivables with disciplined risk controls.
           </p>
           <ul className={`mt-4 grid list-disc gap-2 pl-5 ${TYPO.small}`}>
-            <li>Diskretno upravljanje portfoliom i izveštavanje</li>
-            <li>Fizičko i finansijsko trgovanje commodity tržištima</li>
-            <li>Strukturiranje i otkup potraživanja</li>
+            <li>Institutional‑grade reporting and portfolio oversight</li>
+            <li>Physical and financial commodity trading</li>
+            <li>Receivables structuring and purchasing</li>
           </ul>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <Button asChild className="rounded-full" variant="secondary">
-              <a href="#contact">Razgovarajte sa timom</a>
+              <a href="#contact">Speak with our team</a>
             </Button>
             <Button asChild className="rounded-full">
-              <a href="#contact">Pošaljite upit</a>
+              <a href="#contact">Send an enquiry</a>
             </Button>
           </div>
         </div>

@@ -20,7 +20,11 @@ export default function Header() {
         className="mask-[linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.88)_75%,transparent_100%)] pointer-events-none absolute top-0 z-0 h-20 w-full animate-fade-in bg-[linear-gradient(180deg,#07080a_0%,rgba(7,8,10,0)_100%)] backdrop-blur-2xl motion-reduce:animate-none"
       />
       <div className="wrapper z-10 flex animate-scale-in items-center justify-between px-4! py-2 motion-reduce:animate-none md:px-6!">
-        <a aria-label={ORG.name} className="pointer-events-auto" href="#top">
+        <a
+          aria-label={ORG.name}
+          className="pointer-events-auto rounded-xl border bg-[#07080a] px-2 py-1"
+          href="#top"
+        >
           <Image
             alt="Goldberg Real Estate logo"
             className="h-8 w-auto"

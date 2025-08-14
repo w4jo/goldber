@@ -51,7 +51,7 @@ export default function ContactForm() {
     company: '',
     email: '',
     message: '',
-    enquiry: 'Investment',
+    enquiry: 'Real Estate',
   })
   const [touched, setTouched] = React.useState<
     Record<keyof FormState, boolean>
@@ -108,7 +108,7 @@ export default function ContactForm() {
         company: '',
         email: '',
         message: '',
-        enquiry: 'Investment',
+        enquiry: 'Real Estate',
       })
       setTouched({
         fullName: false,
@@ -138,8 +138,8 @@ export default function ContactForm() {
               Contact us
             </h2>
             <p className={cn('mt-2 max-w-xl text-foreground/80', TYPO.body)}>
-              Odaberite tip upita i kratko nam recite kako možemo da pomognemo.
-              Na poruke najčešće odgovaramo u roku od dva radna dana.
+              Choose your enquiry type and share a few details. We typically
+              respond within two business days.
             </p>
           </div>
 

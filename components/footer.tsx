@@ -1,7 +1,7 @@
 import { cn } from '@voluspalabs/lib/utils/cn'
 import Image from 'next/image'
 import { TYPO } from '@/components/typography'
-import { LEGAL, NAV_ITEMS, ORG } from './content'
+import { NAV_ITEMS, ORG } from './content'
 
 const LINK_ITEM_CLASS =
   'group flex items-center justify-between rounded-xl px-3 py-2 text-foreground/90 hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
@@ -27,14 +27,19 @@ export default function Footer() {
             <p className={cn('mt-3 max-w-sm text-foreground/80', TYPO.small)}>
               {ORG.tagline}
             </p>
-            <p className={cn('mt-2 text-foreground/60', TYPO.caption)}>
-              {LEGAL.investmentDisclaimer}
-            </p>
+            <div className="mt-4 grid gap-2 text-foreground/80">
+              <a className={cn('underline', TYPO.small)} href="#projects">
+                Explore projects →
+              </a>
+              <a className={cn('underline', TYPO.small)} href="#contact">
+                Work with us →
+              </a>
+            </div>
           </div>
 
           <nav aria-label="Footer navigation">
             <ul className="grid grid-cols-2 gap-2">
-              {NAV_ITEMS.filter((n) => n.id !== 'faq').map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <a className={LINK_ITEM_CLASS} href={`#${item.id}`}>
                     <span className={LINK_LABEL_CLASS}>{item.label}</span>

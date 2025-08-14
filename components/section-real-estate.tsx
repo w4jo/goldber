@@ -12,30 +12,29 @@ export default function SectionRealEstate() {
       <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <h2 className={TYPO.h2} id="real-estate-heading">
-            Real Estate
+            Real Estate Development & Investment
           </h2>
           <p className={`mt-2 max-w-2xl text-foreground/80 ${TYPO.body}`}>
-            Gradimo i investiramo u projekte koji povezuju svakodnevni život i
-            posao. Fokus nam je na poslovno‑stambenim kompleksima, selektivnim
-            rezidencijalnim projektima i prilagođenim rešenjima za dugoročnu
-            vrednost.
+            We develop and invest in places where life and work meet. Our focus
+            spans mixed‑use and residential assets with resilient fundamentals
+            and long‑term value creation through active asset management.
           </p>
           <ul className={`mt-4 grid list-disc gap-2 pl-5 ${TYPO.small}`}>
-            <li>Izgradnja i prodaja poslovno‑stambenih kompleksa</li>
-            <li>Selektivna kupovina i aktivno upravljanje imovinom</li>
-            <li>Ko‑investicije sa pouzdanim partnerima</li>
+            <li>Ground‑up mixed‑use and residential developments</li>
+            <li>Select acquisitions and active asset management</li>
+            <li>Co‑investments with trusted partners</li>
           </ul>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <Button asChild className="rounded-full" variant="secondary">
-              <a href="#projects">Pogledajte projekte</a>
+              <a href="#projects">View projects</a>
             </Button>
             <Button asChild className="rounded-full">
-              <a href="#contact">Kontaktirajte nas</a>
+              <a href="#contact">Discuss a site</a>
             </Button>
           </div>
           <dl className={`mt-8 grid grid-cols-2 gap-4 ${TYPO.small}`}>
             <div>
-              <dt className="text-foreground/60">Poslednji projekat</dt>
+              <dt className="text-foreground/60">Latest project</dt>
               <dd className="mt-0.5 font-medium">
                 <a className="underline" href="https://sakurapark.rs">
                   Sakura Park
@@ -43,7 +42,7 @@ export default function SectionRealEstate() {
               </dd>
             </div>
             <div>
-              <dt className="text-foreground/60">Reference</dt>
+              <dt className="text-foreground/60">References</dt>
               <dd className="mt-0.5 font-medium">
                 <a
                   className="underline"
