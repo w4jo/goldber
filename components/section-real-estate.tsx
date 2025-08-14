@@ -62,7 +62,7 @@ export default function SectionRealEstate() {
               fill
               placeholder="empty"
               sizes="(min-width:1024px) 40rem, 100vw"
-              src="/images/green-building.avif"
+              src="/images/real-estate.jpg"
             />
           </div>
         </div>

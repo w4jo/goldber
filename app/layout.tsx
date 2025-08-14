@@ -3,7 +3,6 @@ import { Geist_Mono, Inter } from 'next/font/google'
 import { Suspense } from 'react'
 import './globals.css'
 import { ORG } from '@/components/content'
-import CookieConsent from '@/components/cookie-consent'
 
 const geistSans = Inter({
   variable: '--font-geist-sans',
@@ -75,9 +74,6 @@ export default function RootLayout({
           )
         })()}
         {children}
-        <Suspense fallback={null}>
-          <CookieConsent />
-        </Suspense>
       </body>
     </html>
   )

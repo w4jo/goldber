@@ -41,7 +41,7 @@ export default function SectionGreenEnergy() {
               fill
               placeholder="empty"
               sizes="(min-width:1024px) 40rem, 100vw"
-              src="/images/wind-turbines-2.avif"
+              src="/images/wind-turbines-1.avif"
             />
           </div>
         </div>

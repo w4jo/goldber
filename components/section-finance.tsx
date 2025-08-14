@@ -41,7 +41,7 @@ export default function SectionFinance() {
               fill
               placeholder="empty"
               sizes="(min-width:1024px) 40rem, 100vw"
-              src="/globe.svg"
+              src="/images/finance-trading.jpg"
             />
           </div>
         </div>

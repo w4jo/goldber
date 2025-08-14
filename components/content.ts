@@ -32,46 +32,68 @@ export interface ProjectItem {
 
 export const PROJECTS: readonly ProjectItem[] = [
   {
-    id: 'real-estate',
-    number: 1,
-    title: 'Real Estate',
+    id: 'novy-jenstejn',
+    number: 2,
+    title: 'Novy Jenstejn',
+    description:
+      'So far, 250 houses have been built and sold, while 50 houses are under construction in phase III. The total number of houses planned for construction is 600.',
+    meta: [
+      { label: 'Location', value: 'Prague, Czech Republic' },
+      // { label: 'Date', value: 'Latest project' },
+      {
+        label: 'Website',
+        value: 'https://rd-jenstejn.cz',
+      },
+    ],
+    image: '/images/projects/novy-jenstejn/novy-jenstejn.jpg',
+  },
+  {
+    id: 'sakura-park',
+    number: 2,
+    title: 'Sakura Park',
     description:
       'Selective residential and light‑industrial assets across resilient European locations. We pursue durable cash flows, disciplined leverage, and active asset management that compounds over time.',
     meta: [
-      { label: 'Location', value: 'Dalarnas, Sweden' },
-      { label: 'Size', value: '250 m²' },
-      { label: 'Materials', value: 'Oak, Ash, Copper' },
+      { label: 'Location', value: 'Belgrade, Serbia' },
+      { label: 'Date', value: 'Latest project' },
+      {
+        label: 'Website',
+        value: 'https://sakurapark.rs',
+      },
     ],
-    image: '/images/real-estate-eu.avif',
+    image: '/images/projects/sakura-park/sakura-park.jpg',
   },
   {
-    id: 'green-energy',
-    number: 2,
-    title: 'Green Energy',
-    description:
-      'Onshore wind and solar paired with storage to deliver stable, long‑term revenues. We favor high‑resource sites with grid access and pragmatic, low‑carbon construction.',
-    meta: [
-      { label: 'Location', value: 'Dalarnas, Sweden' },
-      { label: 'Size', value: '320 m²' },
-      { label: 'Materials', value: 'Oak, Ash, Wood-fibre' },
-    ],
-    image: '/images/wind-turbines-2.avif',
-  },
-  {
-    id: 'luxury-cars',
+    id: 'kloboucnicka',
     number: 3,
-    title: 'Luxury Cars',
+    title: 'Kloboucnicka',
+    description:
+      'Selective residential and light‑industrial assets across resilient European locations. We pursue durable cash flows, disciplined leverage, and active asset management that compounds over time.',
+    meta: [
+      { label: 'Location', value: 'Prague, Czech Republic' },
+      // { label: 'Date', value: 'Latest project' },
+      {
+        label: 'Website',
+        value: 'https://rezidence-kloboucnicka.cz/',
+      },
+    ],
+    image: '/images/projects/kloboucnicka/kloboucnicka.jpg',
+  },
+  {
+    id: 'pula-croatia',
+    number: 4,
+    title: 'Pula Croatia',
     description:
       'Limited‑run performance vehicles curated for resilience and value retention. Focused on provenance, condition, and long‑term collectability within a balanced portfolio.',
     meta: [
-      { label: 'Location', value: 'Dalarnas, Sweden' },
-      { label: 'Size', value: '180 m²' },
-      { label: 'Materials', value: 'Ash, Copper, Wood fibre' },
+      { label: 'Location', value: 'Pula, Croatia' },
+      { label: 'Date', value: 'Coming Soon' },
     ],
-    image: '/images/lux-cars.avif',
+    image: '/placeholder.svg',
   },
 ]
 
+// 4 items grid
 export const SERVICES: readonly {
   readonly id: string
   readonly title: string
@@ -144,69 +166,3 @@ export const FLEET: readonly {
     specs: '3.0L I6 • 0–100km/h in 3.7s',
   },
 ]
-
-export const INSIGHTS: readonly {
-  readonly category: string
-  readonly title: string
-  readonly date: string
-  readonly author: string
-  readonly image: string
-}[] = [
-  {
-    category: 'Sustainability',
-    title: 'Unlocking Hydropower: a baseline for clean returns',
-    date: '2024-09-12',
-    author: 'Editorial',
-    image: '/placeholder.svg',
-  },
-  {
-    category: 'Portfolio',
-    title: 'Redefining Wind: parks that finance resilience',
-    date: '2024-08-01',
-    author: 'Editorial',
-    image: '/placeholder.svg',
-  },
-  {
-    category: 'Technology',
-    title: 'From cells to stations: advancing solar for stability',
-    date: '2024-06-04',
-    author: 'Editorial',
-    image: '/placeholder.svg',
-  },
-  {
-    category: 'Energy',
-    title: 'Illuminating the Future: the real value of clean energy',
-    date: '2024-03-21',
-    author: 'Editorial',
-    image: '/placeholder.svg',
-  },
-]
-
-export const FAQS: readonly {
-  readonly q: string
-  readonly a: string
-}[] = [
-  {
-    q: 'How do I enquire about a project or partnership?',
-    a: 'Use the contact form below and select your enquiry type. A member of our team will reply within two business days.',
-  },
-  {
-    q: 'What is an international money transfer?',
-    a: 'An international money transfer moves funds from one country to another. We only accept funds via regulated banking channels. For any financial instructions contact us directly to verify details.',
-  },
-  {
-    q: 'How do I send money to a bank account?',
-    a: 'Initiate a transfer from your bank or payment provider. Always verify the beneficiary details over an authenticated channel before sending funds.',
-  },
-  {
-    q: 'How do I verify my identity?',
-    a: 'For regulated transactions, we may require identity verification in accordance with AML/KYC requirements. We will provide secure instructions as needed.',
-  },
-]
-
-export const LEGAL = {
-  investmentDisclaimer:
-    'Nothing on this site constitutes an offer or recommendation to invest. Past performance does not guarantee future results. For professional advice and full terms, contact us.',
-  cookieNotice:
-    'We use cookies to analyze traffic and improve your experience. You can update your preferences at any time.',
-} as const
